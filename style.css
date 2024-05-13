@@ -7,7 +7,7 @@ font-family: 'Poppins', sans-serif;
 
 * {
     margin: 0; /* Elimina el margen exterior */
-    padding: 0; /* Elimina el relleno */
+    padding: 10; /* Elimina el relleno */
     box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y alto totales */
     text-decoration: none; /* Elimina la decoración de texto */
     list-style: none; /* Elimina los marcadores de lista predeterminados */
@@ -40,12 +40,13 @@ img {
 
 /* Establece estilos para elementos con la clase '.container' */
 .container {
-    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    /* max-width: 1200px; */ /* Limita el ancho máximo del contenedor */
     margin: 0 auto; /* Centra el contenedor horizontalmente */
+    margin: 1vw;
 }
 
-/* Establece estilos para elementos con la clase '.header' */
-.header {
+/* Establece estilos para elementos header */
+header {
     background-position: center; /* Establece la posición del fondo */
     display: flex; /* Utiliza el modelo de caja flexible */
     align-items: center; /* Centra verticalmente los elementos secundarios */
@@ -60,7 +61,7 @@ img {
     top: 0; left: 0; right: 0; /* Fija el menú a la parte superior y lo extiende por todo el ancho */
     display: flex; /* Utiliza el modelo de caja flexible */
     align-items: center; /* Centra verticalmente los elementos secundarios */
-    justify-content: space-between; /* Distribuye uniformemente los elementos secundarios */
+    justify-content: center; /* Distribuye uniformemente los elementos secundarios */
 }
 
 
@@ -186,14 +187,25 @@ th, td {
     margin-bottom: 20px; /* Añade margen inferior */
 }
 
+
 /* Empieza el sub menu (restauracion de piezas antiadhrente/pulido/repuestos */
 /* Establece estilos para los botones con la clase '.btn-1' */
 .btn-1 {
     display: inline-block; /* Convierte el elemento en un bloque en línea */
-    padding: 11px 25px; /* Añade relleno */
     background-color: #111111; /* Establece el color de fondo */
     color: #ffffff; /* Establece el color del texto */
     border-radius: 5px; /* Establece el radio de borde */
+    padding: 11px 25px; /* Añade relleno */
+}
+
+/* Establece estilos para botones con la clase '.btn-2' */
+.btn-2 {
+    display: inline-block; /* Convierte el elemento en un bloque en línea */
+    background-color: #111111; /* Establece el color de fondo */
+    color: #ffffff; /* Establece el color del texto */
+    border-radius: 5px; /* Establece el radio de borde */
+    padding: 7px 18px; /* Añade relleno */
+    font-size: 15px; /* Establece el tamaño de fuente */
 }
 
 /* Establece estilos para elementos con la clase '.ofert' */
@@ -236,16 +248,6 @@ th, td {
     font-size: 25px; /* Establece el tamaño de fuente */
     text-transform: uppercase; /* Convierte el texto a mayúsculas */
     margin-bottom: 15px; /* Añade margen inferior */
-}
-
-/* Establece estilos para botones con la clase '.btn-2' */
-.btn-2 {
-    display: inline-block; /* Convierte el elemento en un bloque en línea */
-    padding: 7px 18px; /* Añade relleno */
-    background-color: #111111; /* Establece el color de fondo */
-    color: #ffffff; /* Establece el color del texto */
-    border-radius: 5px; /* Establece el radio de borde */
-    font-size: 15px; /* Establece el tamaño de fuente */
 }
 
 
@@ -320,7 +322,7 @@ th, td {
     flex-basis: calc(33.33% - 30px); /* Establece el tamaño base */
     display: flex; /* Utiliza el modelo de caja flexible */
     align-items: center; /* Centra verticalmente los elementos secundarios */
-    justify-content: space-between; /* Distribuye uniformemente los elementos secundarios */
+    justify-content: space-around; /* Distribuye uniformemente los elementos secundarios */
     padding: 25px; /* Añade relleno */
     background-color: #f5f5f5; /* Establece el color de fondo */
 }
@@ -522,20 +524,24 @@ form p a {
     font-size: 30px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
     z-index: 100;
-  }
+}
   
-  .btn-wsp:hover { 
+.btn-wsp:hover { 
     text-decoration: none;
     color: #0df053;
     background-color: #f9f9f9;
-  
-  }
+}
 
 /* Estilo para el main de quienes somos */
-  .main-1 {
+.main-1 {
     text-align: center;
     color: black
-  }
+}
+
+
+#main-quienes-somos {
+    
+}
 
 
 /* Establece estilos para los medios de comunicación cuando el ancho de la ventana es menor o igual a 991px */
@@ -549,6 +555,7 @@ form p a {
     /* Establece estilos para los elementos 'label' dentro del menú */
     .menu label {
         display: initial; /* Muestra los elementos */
+        position: relative right;
     }
 
     /* Establece estilos para la barra de navegación dentro del menú */
