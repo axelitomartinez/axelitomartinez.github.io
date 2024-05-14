@@ -26,22 +26,16 @@ img {
 /* Banner del principio */
 .img-banner {
     max-width: 1000px; /* Limita el ancho máximo del contenedor */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
     text-align: center; /* Centra el texto dentro del contenedor */
     display: flex; /* Establece el modelo de visualización del contenedor como flexbox */
     justify-content: center; /* Alinea los elementos secundarios en el centro horizontal del contenedor flex */
-}
-
-
-.img-banner {
-    max-width: 50%; /* Hace que la imagen sea responsive */
+    max-width: 70%; /* Hace que la imagen sea responsive */
     margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
 /* Establece estilos para elementos con la clase '.container' */
 .container {
     /* max-width: 1200px; */ /* Limita el ancho máximo del contenedor */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
     margin: 1vw;
 }
 
@@ -50,18 +44,22 @@ header {
     background-position: center; /* Establece la posición del fondo */
     display: flex; /* Utiliza el modelo de caja flexible */
     align-items: center; /* Centra verticalmente los elementos secundarios */
-    min-height: 80vh; /* Establece la altura mínima */
+    min-height: 60vh; /* Establece la altura mínima */
     background-color: #f5f5f5f5; /* Establece el color de fondo */
-    padding: 70px 0; /* Añade relleno superior e inferior */
+    display: inline-block;
 }
 
 /* Establece estilos para elementos con la clase '.menu' */
 .menu {
-    position: absolute; /* Establece la posición absoluta */
+    margin:0;
+    min-height: 90px;
+    position: sticky; /* Establece la posición absoluta */
     top: 0; left: 0; right: 0; /* Fija el menú a la parte superior y lo extiende por todo el ancho */
     display: flex; /* Utiliza el modelo de caja flexible */
     align-items: center; /* Centra verticalmente los elementos secundarios */
     justify-content: center; /* Distribuye uniformemente los elementos secundarios */
+    background-color:rgb(222, 184, 135, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 
@@ -155,7 +153,7 @@ th, td {
     justify-content: space-between; /* Distribuye uniformemente los elementos secundarios */
     align-items: center; /* Centra verticalmente los elementos secundarios */
     flex: 1; /* Establece la flexibilidad */
-    padding: 0 200px; /* Añade relleno horizontal */
+    padding: 0 10vw;
 }
 
 /* Establece estilos para elementos con la clase '.header-img' */
@@ -382,7 +380,7 @@ th, td {
 /* Establece estilos para el contenido del pie de página */
 .footer-content {
     display: flex; /* Utiliza el modelo de caja flexible */
-    justify-content: space-between; /* Distribuye uniformemente los elementos secundarios */
+    justify-content: space-around; /* Distribuye uniformemente los elementos secundarios */
 }
 
 /* Establece estilos para el encabezado h3 dentro de elementos con la clase '.link' */
@@ -400,6 +398,10 @@ th, td {
     color: #dcdcdc; /* Establece el color del texto */
     display: block; /* Convierte los enlaces en bloques */
     margin-bottom: 10px; /* Añade margen inferior */
+}
+
+.link {
+    margin-bottom: 20px;
 }
 
 /* Formulario de contacto */
@@ -511,20 +513,21 @@ form p a {
 /* Logo de wpp flotante */
 
 .btn-wsp {
+    display: flex;
     position: fixed;
     right: 20px;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
+    min-height: 80px;
+    min-width: 80px;
+    width: 5vw;
+    height: 5vw;
+    padding: 10px;
     border-radius: 30%;
-    bottom: 30px;
+    bottom: 20px;
     background-color: #0df053;
-    color: #f9f9f9;
-    text-align: center;
-    font-size: 30px;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
     z-index: 100;
 }
+
   
 .btn-wsp:hover { 
     text-decoration: none;
@@ -539,8 +542,12 @@ form p a {
 }
 
 
-#main-quienes-somos {
-    
+#quienes-somos {
+    text-align:justify;
+    display: flex;
+    padding: 5vw 10vw;
+    justify-content: center;
+    font-size: 1.5rem;
 }
 
 
@@ -549,7 +556,7 @@ form p a {
 
     /* Establece estilos para el menú */
     .menu {
-        padding: 20px; /* Añade relleno */
+       /*  padding: 20px; */ /* Añade relleno */
     }
 
     /* Establece estilos para los elementos 'label' dentro del menú */

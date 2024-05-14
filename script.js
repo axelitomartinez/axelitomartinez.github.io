@@ -1,3 +1,14 @@
+
+
+function main() {
+    
+}
+
+main();
+
+
+
+
 const carrito = document.getElementById('carrito');
 const elementos1 = document.getElementById('lista-1');
 const listaCarrito = document.querySelector('#lista-carrito > tbody');
