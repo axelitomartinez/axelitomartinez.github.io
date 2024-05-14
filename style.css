@@ -193,7 +193,13 @@ th, td {
     background-color: #111111; /* Establece el color de fondo */
     color: #ffffff; /* Establece el color del texto */
     border-radius: 5px; /* Establece el radio de borde */
-    padding: 11px 25px; /* Añade relleno */
+    padding: 12px 25px; /* Añade relleno */
+    
+}
+.btn-1:hover {
+    transition: all 0.1s ease-in-out;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Establece estilos para botones con la clase '.btn-2' */
@@ -204,6 +210,11 @@ th, td {
     border-radius: 5px; /* Establece el radio de borde */
     padding: 7px 18px; /* Añade relleno */
     font-size: 15px; /* Establece el tamaño de fuente */
+}
+.btn-2:hover {
+    transition: all 0.1s ease-in-out;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Establece estilos para elementos con la clase '.ofert' */
@@ -609,6 +620,7 @@ form p a {
     .header-content {
         padding: 50px 0; /* Añade relleno */
         flex-direction: column; /* Cambia la dirección de los elementos secundarios a columna */
+
     }
 
     /* Oculta la imagen del encabezado */
