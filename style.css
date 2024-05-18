@@ -559,7 +559,7 @@ form p a {
     color: black
 }
 
-
+/* Preguntas Frecuentes */
 #quienes-somos {
     text-align:justify;
     display: flex;
@@ -568,6 +568,25 @@ form p a {
     font-size: 1.5rem;
 }
 
+/* Preguntas Frecuentes */
+.pregFrecuen {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 30px;
+    padding: 20px;
+    font-size: 1.3rem;
+}
+
+.email {
+    color: blue;
+    text-decoration: none;
+}
+
+.email:hover {
+    color: cornflowerblue;
+    text-decoration: none;
+    text-decoration: underline;
+}
 
 /* Establece estilos para los medios de comunicación cuando el ancho de la ventana es menor o igual a 991px */
 @media (max-width:991px) {
