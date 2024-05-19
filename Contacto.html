@@ -28,6 +28,7 @@
                     <li><a href="./Productos.html">Productos</a></li>
                     <li><a href="./preguntas_frecuentes.html">Preguntas frecuentes</a></li>
                     <li><a href="./Contacto.html">Contactos</a></li>
+                    <li><a href="./Registro.html">Registro</a></li>
                 </ul>
             </nav>
             <div>
@@ -68,7 +69,7 @@
 <br>
 <br>
     <main>
-        <div class="container-form">
+        <!-- <div class="container-form">
 
             <div class="form-content">
                 <h1 id="title">Registro</h1>
@@ -104,7 +105,95 @@
                     
                 </form>
             </div>
+        </div> -->
+        <div class="container-form1">
+            <div class="form-content1"> 
+             <form action="">
+      
+      
+          <h2>
+            Formulario de Contacto
+          </h2>
+      
+      <!-- Simple Inputs -->
+      
+      <div class="input-group">
+        <div class="input">
+           <fieldset>
+            <legend>INFORMACION BASICA</legend>
+            <input type="Nombre" placeholder="Nombre " id="nombre" required>
+            <input type="Apellido" placeholder="Apellido" required>
+            <input type="Edad" placeholder="Edad">
+           </fieldset>
+           
+           <fieldset>
+            <legend>INFORMACION DE CONTACTO</legend>
+            <input type="Email" placeholder="Email" id="Email" required>
+            <input type="text" placeholder="Telefono" id="Telefono" required>
+           </fieldset>
+          </div>
+      
+            
+           
+      
+      
+      
+      
+      <!-- Select & option -->
+          <div class="input-field1">
+            <label for="">¿Que pieza queres restaurar?
+              <select>
+                <option value="Cacerola">Cacerola de 24cm a 26cm</option>
+                <option value="Cacerola">Sarten de 24cm a 26cm</option>
+                <option value="Cacerola">Bifera de 26cm a 29cm</option>
+                <option value="Cacerola">Paellera/Pizzera/Ovalada de 30cm a 33cm</option>
+                <option value="Cacerola">Cacerola Doble/Sarten Doble de 24cm a 30cm</option>
+                <option value="Cacerola">Cuadrada/Olla/Rectangular de 28cm a 30cm</option>
+                <option value="Cacerola">Jarro/Pava/Cafetera</option>
+                <option value="Cacerola">Tostador Simple/Doble</option>
+                <option value="Cacerola">Budinera o otros complementos</option>
+            </label>
+            </select>
+          </div>
+      
+      <!-- Datalist & Option -->
+          <div class="input-field1">
+            <label for="">¿Por donde nos conociste?
+              <input list="Referente" name="Referente">
+              <datalist id="Referente">
+                <option value="Red Social">Instagram/Facebook</option>
+                <option value="Recomendacion familiar">Un Amigo/familiar</option>
+                <option value="Recomendacion Empresa">Una empresa/Negocio</option>
+            </label>
+            </select>
+          </div>
+      
+      <!-- Textarea -->
+          <div class="input-field1">
+            <label>Descripcion del problema
+            <textarea placeholder="Describe la reparación..." id="Mensaje"></textarea>
+          </label>
+          </div>
+      
+          <label for="adjunto">Subir Foto de tu pieza (Opcional):</label>
+          <input type="file" id="adjunto" name="adjunto"><br><br>
+      
+          <div class="input-field1">
+            <label>Acepto <a href="./termis.html" target="_blank">Terminos y Condiciones</a>
+            <input type="checkbox" class="checkbox">
+          </label>
+          </div>
         </div>
+          <div class="btn-field1">
+            <button id="signUp" type="button">Registro</button>
+            <button id="signIn" type="button" class="disable">Login</button>
+        </div>
+      
+      
+      
+        </form>
+      </div>
+      </div>
     
     </main>
 

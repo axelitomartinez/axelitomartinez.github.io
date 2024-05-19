@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap");
 
 /*
 font-family: 'Oswald', sans-serif;
@@ -6,728 +6,779 @@ font-family: 'Poppins', sans-serif;
 */
 
 * {
-    margin: 0; /* Elimina el margen exterior */
-    padding: 10; /* Elimina el relleno */
-    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y alto totales */
-    text-decoration: none; /* Elimina la decoración de texto */
-    list-style: none; /* Elimina los marcadores de lista predeterminados */
+  margin: 0; /* Elimina el margen exterior */
+  padding: 10; /* Elimina el relleno */
+  box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y alto totales */
+  text-decoration: none; /* Elimina la decoración de texto */
+  list-style: none; /* Elimina los marcadores de lista predeterminados */
 }
 
 /* Establece estilos para el elemento 'body' */
 body {
-    font-family: 'Poppins', sans-serif; /* Define la fuente principal */
+  font-family: "Poppins", sans-serif; /* Define la fuente principal */
 }
 
 /* Establece estilos para los elementos 'img' */
 img {
-    max-width: 100%; /* Garantiza que las imágenes no se extiendan más allá de su contenedor */
+  max-width: 100%; /* Garantiza que las imágenes no se extiendan más allá de su contenedor */
 }
 
 /* Banner del principio */
 .img-banner {
-    max-width: 1000px; /* Limita el ancho máximo del contenedor */
-    text-align: center; /* Centra el texto dentro del contenedor */
-    display: flex; /* Establece el modelo de visualización del contenedor como flexbox */
-    justify-content: center; /* Alinea los elementos secundarios en el centro horizontal del contenedor flex */
-    max-width: 70%; /* Hace que la imagen sea responsive */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
+  max-width: 1000px; /* Limita el ancho máximo del contenedor */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  display: flex; /* Establece el modelo de visualización del contenedor como flexbox */
+  justify-content: center; /* Alinea los elementos secundarios en el centro horizontal del contenedor flex */
+  max-width: 70%; /* Hace que la imagen sea responsive */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
 /* Establece estilos para elementos con la clase '.container' */
 .container {
-    /* max-width: 1200px; */ /* Limita el ancho máximo del contenedor */
-    margin: 1vw;
+  /* max-width: 1200px; */ /* Limita el ancho máximo del contenedor */
+  margin: 1vw;
 }
 
 /* Establece estilos para elementos header */
 header {
-    background-position: center; /* Establece la posición del fondo */
-    display: flex; /* Utiliza el modelo de caja flexible */
-    align-items: center; /* Centra verticalmente los elementos secundarios */
-    min-height: 60vh; /* Establece la altura mínima */
-    background-color: #f5f5f5f5; /* Establece el color de fondo */
-    display: inline-block;
+  background-position: center; /* Establece la posición del fondo */
+  display: flex; /* Utiliza el modelo de caja flexible */
+  align-items: center; /* Centra verticalmente los elementos secundarios */
+  min-height: 60vh; /* Establece la altura mínima */
+  background-color: #f5f5f5f5; /* Establece el color de fondo */
+  display: inline-block;
 }
 
 /* Establece estilos para elementos con la clase '.menu' */
 .menu {
-    margin:0;
-    min-height: 90px;
-    position: sticky; /* Establece la posición absoluta */
-    top: 0; left: 0; right: 0; /* Fija el menú a la parte superior y lo extiende por todo el ancho */
-    display: flex; /* Utiliza el modelo de caja flexible */
-    align-items: center; /* Centra verticalmente los elementos secundarios */
-    justify-content: center; /* Distribuye uniformemente los elementos secundarios */
-    background-color:rgb(222, 184, 135, 0.1);
-    backdrop-filter: blur(10px);
+  margin: 0;
+  min-height: 90px;
+  position: sticky; /* Establece la posición absoluta */
+  top: 0;
+  left: 0;
+  right: 0; /* Fija el menú a la parte superior y lo extiende por todo el ancho */
+  display: flex; /* Utiliza el modelo de caja flexible */
+  align-items: center; /* Centra verticalmente los elementos secundarios */
+  justify-content: center; /* Distribuye uniformemente los elementos secundarios */
+  background-color: rgb(222, 184, 135, 0.1);
+  backdrop-filter: blur(10px);
 }
-
 
 /* Establece estilos para elementos con la clase '.logo' dentro de '.menu' */
 .logo {
-    width: 100px; /* Establece el ancho */
-    height: auto; /* Ajusta la altura automáticamente */
-    float: left; /* Alinea el elemento a la izquierda */
-    margin-right: 10px; /* Añade margen derecho */
-    display: flex; /* Utiliza el modelo de caja flexible */
-    align-items: center; /* Centra verticalmente los elementos secundarios */
+  width: 100px; /* Establece el ancho */
+  height: auto; /* Ajusta la altura automáticamente */
+  float: left; /* Alinea el elemento a la izquierda */
+  margin-right: 10px; /* Añade margen derecho */
+  display: flex; /* Utiliza el modelo de caja flexible */
+  align-items: center; /* Centra verticalmente los elementos secundarios */
 }
 .menu .navbar ul li {
-    position: relative;
-    float: left;
+  position: relative;
+  float: left;
 }
 
 /* Establece estilos para los enlaces dentro de los elementos 'li' de la clase '.navbar' dentro de '.menu' */
 .menu .navbar ul li a {
-    font-size: 18px; /* Establece el tamaño de fuente */
-    padding: 20px; /* Añade relleno */
-    color: #111111; /* Establece el color del texto */
-    display: block; /* Convierte los enlaces en bloques */
+  font-size: 18px; /* Establece el tamaño de fuente */
+  padding: 20px; /* Añade relleno */
+  color: #111111; /* Establece el color del texto */
+  display: block; /* Convierte los enlaces en bloques */
 }
 
 /* Establece estilos para el elemento con el ID 'menu' */
 #menu {
-    display: none; /* Oculta el elemento */
+  display: none; /* Oculta el elemento */
 }
 
 /* Establece estilos para elementos con la clase '.menu-icono' */
 .menu-icono {
-    width: 25px; /* Establece el ancho */
+  width: 25px; /* Establece el ancho */
 }
 
 /* Establece estilos para los elementos 'label' dentro del menú */
 .menu label {
-    cursor: pointer; /* Cambia el cursor a puntero al pasar por encima */
-    display: none; /* Oculta los elementos */
+  cursor: pointer; /* Cambia el cursor a puntero al pasar por encima */
+  display: none; /* Oculta los elementos */
 }
-
 
 /* Establece estilos para elementos con la clase '.submenu' */
 .submenu {
-    position: relative; /* Establece la posición relativa */
+  position: relative; /* Establece la posición relativa */
 }
 
 /* Establece estilos para el elemento con el ID 'carrito' dentro de '.submenu' */
 .submenu #carrito {
-    display: none; /* Oculta el elemento */
+  display: none; /* Oculta el elemento */
 }
 
 /* Establece estilos cuando se pasa el ratón por encima de '.submenu #carrito' */
 .submenu:hover #carrito {
-    display: block; /* Muestra el elemento */
-    position: absolute; /* Establece la posición absoluta */
-    right: 0; /* Coloca el elemento a la derecha */
-    backdrop-filter: blur(10px); /* Aplica un filtro de desenfoque */
-    top: 100%; /* Coloca el elemento debajo */
-    z-index: 1; /* Establece el índice z para la superposición */
-    background-color: #4e485076; /* Establece el color de fondo */
-    padding: 20px; /* Añade relleno */
-    min-width: 400px; /* Establece el ancho mínimo */
+  display: block; /* Muestra el elemento */
+  position: absolute; /* Establece la posición absoluta */
+  right: 0; /* Coloca el elemento a la derecha */
+  backdrop-filter: blur(10px); /* Aplica un filtro de desenfoque */
+  top: 100%; /* Coloca el elemento debajo */
+  z-index: 1; /* Establece el índice z para la superposición */
+  background-color: #4e485076; /* Establece el color de fondo */
+  padding: 20px; /* Añade relleno */
+  min-width: 400px; /* Establece el ancho mínimo */
 }
 
 /* Establece estilos para el elemento 'table' */
 table {
-    width: 100%; /* Establece el ancho al 100% */
+  width: 100%; /* Establece el ancho al 100% */
 }
 
 /* Establece estilos para los elementos 'th' y 'td' */
-th, td {
-    color: #ffffff; /* Establece el color del texto */
+th,
+td {
+  color: #ffffff; /* Establece el color del texto */
 }
-
 
 /* Establece estilos para elementos con la clase '.borrar' */
 .borrar {
-    background-color: #111111; /* Establece el color de fondo */
-    border-radius: 50%; /* Establece el radio de borde para formar un círculo */
-    padding: 5px 10px; /* Añade relleno */
-    text-decoration: none; /* Elimina la decoración de texto */
-    color: #ffffff; /* Establece el color del texto */
-    font-weight: 800; /* Establece el grosor de la fuente */
-    cursor: pointer; /* Cambia el cursor a puntero */
+  background-color: #111111; /* Establece el color de fondo */
+  border-radius: 50%; /* Establece el radio de borde para formar un círculo */
+  padding: 5px 10px; /* Añade relleno */
+  text-decoration: none; /* Elimina la decoración de texto */
+  color: #ffffff; /* Establece el color del texto */
+  font-weight: 800; /* Establece el grosor de la fuente */
+  cursor: pointer; /* Cambia el cursor a puntero */
 }
 
 /* Establece estilos para elementos con la clase '.header-content' */
 .header-content {
-    display: flex; /* Utiliza el modelo de caja flexible */
-    justify-content: space-between; /* Distribuye uniformemente los elementos secundarios */
-    align-items: center; /* Centra verticalmente los elementos secundarios */
-    flex: 1; /* Establece la flexibilidad */
-    padding: 0 10vw;
+  display: flex; /* Utiliza el modelo de caja flexible */
+  justify-content: space-between; /* Distribuye uniformemente los elementos secundarios */
+  align-items: center; /* Centra verticalmente los elementos secundarios */
+  flex: 1; /* Establece la flexibilidad */
+  padding: 0 10vw;
 }
 
 /* Establece estilos para elementos con la clase '.header-img' */
 .header-img {
-    flex-basis: 50%; /* Establece el tamaño base */
-    text-align: center; /* Centra horizontalmente el texto */
+  flex-basis: 50%; /* Establece el tamaño base */
+  text-align: center; /* Centra horizontalmente el texto */
 }
 
 /* Establece estilos para elementos con la clase '.header-txt' */
 .header-txt {
-    flex-basis: 50%; /* Establece el tamaño base */
-    text-align: center; /* Centra horizontalmente el texto */
+  flex-basis: 50%; /* Establece el tamaño base */
+  text-align: center; /* Centra horizontalmente el texto */
 }
 
 /* Establece estilos para el encabezado h1 dentro de '.header-txt' */
 .header-txt h1 {
-    font-size: 60px; /* Establece el tamaño de fuente */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    line-height: 1; /* Establece la altura de línea */
-    color: #111111; /* Establece el color del texto */
-    font-family: 'oswald', sans-serif; /* Define la fuente */
-    margin-bottom: 15px; /* Añade margen inferior */
+  font-size: 60px; /* Establece el tamaño de fuente */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  line-height: 1; /* Establece la altura de línea */
+  color: #111111; /* Establece el color del texto */
+  font-family: "oswald", sans-serif; /* Define la fuente */
+  margin-bottom: 15px; /* Añade margen inferior */
 }
 
 /* Establece estilos para el párrafo dentro de '.header-txt' */
 .header-txt p {
-    font-size: 20px; /* Establece el tamaño de fuente */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    margin-bottom: 20px; /* Añade margen inferior */
+  font-size: 20px; /* Establece el tamaño de fuente */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  margin-bottom: 20px; /* Añade margen inferior */
 }
-
 
 /* Empieza el sub menu (restauracion de piezas antiadhrente/pulido/repuestos */
 /* Establece estilos para los botones con la clase '.btn-1' */
 .btn-1 {
-    display: inline-block; /* Convierte el elemento en un bloque en línea */
-    background-color: #111111; /* Establece el color de fondo */
-    color: #ffffff; /* Establece el color del texto */
-    border-radius: 5px; /* Establece el radio de borde */
-    padding: 12px 25px; /* Añade relleno */
-    
+  display: inline-block; /* Convierte el elemento en un bloque en línea */
+  background-color: #111111; /* Establece el color de fondo */
+  color: #ffffff; /* Establece el color del texto */
+  border-radius: 5px; /* Establece el radio de borde */
+  padding: 12px 25px; /* Añade relleno */
 }
 .btn-1:hover {
-    transition: all 0.1s ease-in-out;
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Establece estilos para botones con la clase '.btn-2' */
 .btn-2 {
-    display: inline-block; /* Convierte el elemento en un bloque en línea */
-    background-color: #111111; /* Establece el color de fondo */
-    color: #ffffff; /* Establece el color del texto */
-    border-radius: 5px; /* Establece el radio de borde */
-    padding: 7px 18px; /* Añade relleno */
-    font-size: 15px; /* Establece el tamaño de fuente */
+  display: inline-block; /* Convierte el elemento en un bloque en línea */
+  background-color: #111111; /* Establece el color de fondo */
+  color: #ffffff; /* Establece el color del texto */
+  border-radius: 5px; /* Establece el radio de borde */
+  padding: 7px 18px; /* Añade relleno */
+  font-size: 15px; /* Establece el tamaño de fuente */
 }
 .btn-2:hover {
-    transition: all 0.1s ease-in-out;
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Establece estilos para elementos con la clase '.ofert' */
 .ofert {
-    padding: 20px 0 0 0; /* Añade relleno */
-    display: flex; /* Utiliza el modelo de caja flexible */
-    justify-content: space-between; /* Distribuye uniformemente los elementos secundarios */
+  padding: 20px 0 0 0; /* Añade relleno */
+  display: flex; /* Utiliza el modelo de caja flexible */
+  justify-content: space-between; /* Distribuye uniformemente los elementos secundarios */
 }
 
 /* Establece estilos para elementos con la clase '.ofert-1' */
 .ofert-1 {
-    display: flex; /* Utiliza el modelo de caja flexible */
-    align-items: center; /* Centra verticalmente los elementos secundarios */
-    flex-basis: calc(33.33% - 15px); /* Establece el tamaño base */
-    background-color: #f5f5f5; /* Establece el color de fondo */
-    padding: 35px; /* Añade relleno */
+  display: flex; /* Utiliza el modelo de caja flexible */
+  align-items: center; /* Centra verticalmente los elementos secundarios */
+  flex-basis: calc(33.33% - 15px); /* Establece el tamaño base */
+  background-color: #f5f5f5; /* Establece el color de fondo */
+  padding: 35px; /* Añade relleno */
 }
 
 /* Establece estilos para elementos con la clase '.ofert-img' */
 .ofert-img {
-    flex-basis: 50%; /* Establece el tamaño base */
-    margin-right: 15px; /* Añade margen derecho */
+  flex-basis: 50%; /* Establece el tamaño base */
+  margin-right: 15px; /* Añade margen derecho */
 }
 
 /* Establece estilos para las imágenes dentro de elementos con la clase '.ofert-img' */
 .ofert-img img {
-    width: 250px; /* Establece el ancho de la imagen */
+  width: 250px; /* Establece el ancho de la imagen */
 }
 
 /* Establece estilos para elementos con la clase '.ofert-txt' */
 .ofert-txt {
-    flex-basis: 50%; /* Establece el tamaño base */
-    text-align: center; /* Centra horizontalmente el texto */
+  flex-basis: 50%; /* Establece el tamaño base */
+  text-align: center; /* Centra horizontalmente el texto */
 }
 
 /* Establece estilos para el encabezado h3 dentro de '.ofert-txt' */
 .ofert-txt h3 {
-    color: #111111; /* Establece el color del texto */
-    font-family: 'oswald', sans-serif; /* Define la fuente */
-    font-size: 25px; /* Establece el tamaño de fuente */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    margin-bottom: 15px; /* Añade margen inferior */
+  color: #111111; /* Establece el color del texto */
+  font-family: "oswald", sans-serif; /* Define la fuente */
+  font-size: 25px; /* Establece el tamaño de fuente */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  margin-bottom: 15px; /* Añade margen inferior */
 }
-
 
 /* Establece estilos para el contenedor de productos */
 .products {
-    padding: 50px 0; /* Añade relleno */
-    text-align: center; /* Centra horizontalmente el texto */
+  padding: 50px 0; /* Añade relleno */
+  text-align: center; /* Centra horizontalmente el texto */
 }
-
 
 /* Establece estilos para el encabezado h2 dentro de '.products' */
 .products h2 {
-    color: #111111; /* Establece el color del texto */
-    font-family: 'oswald', sans-serif; /* Define la fuente */
-    font-size: 50px; /* Establece el tamaño de fuente */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    margin-bottom: 50px; /* Añade margen inferior */
+  color: #111111; /* Establece el color del texto */
+  font-family: "oswald", sans-serif; /* Define la fuente */
+  font-size: 50px; /* Establece el tamaño de fuente */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  margin-bottom: 50px; /* Añade margen inferior */
 }
 
 /* Establece estilos para el contenido de los productos */
 .product-content {
-    display: grid; /* Utiliza el modelo de caja de cuadrícula */
-    grid-template-columns: repeat(3, 1fr); /* Crea una cuadrícula de 3 columnas */
-    gap: 50px; /* Añade espacio entre las columnas */
+  display: grid; /* Utiliza el modelo de caja de cuadrícula */
+  grid-template-columns: repeat(3, 1fr); /* Crea una cuadrícula de 3 columnas */
+  gap: 50px; /* Añade espacio entre las columnas */
 }
 
 /* Establece estilos para los elementos con la clase '.product' */
 .product {
-    text-align: center; /* Centra horizontalmente el texto */
-    padding: 30px; /* Añade relleno */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Añade una sombra alrededor del elemento */
+  text-align: center; /* Centra horizontalmente el texto */
+  padding: 30px; /* Añade relleno */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Añade una sombra alrededor del elemento */
 }
 
 /* Establece estilos para las imágenes dentro de los elementos con la clase '.product' */
 .product img {
-    width: 250px; /* Establece el ancho de la imagen */
-    height: 370px; /* Establece la altura de la imagen */
-    margin-bottom: 20px; /* Añade margen inferior */
+  width: 250px; /* Establece el ancho de la imagen */
+  height: 370px; /* Establece la altura de la imagen */
+  margin-bottom: 20px; /* Añade margen inferior */
 }
 
 /* Establece estilos para el encabezado h3 dentro de los elementos '.product' */
 .product h3 {
-    font-size: 20px; /* Establece el tamaño de fuente */
-    color: #111111; /* Establece el color del texto */
-    font-family:'oswald', sans-serif; /* Define la fuente */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  font-size: 20px; /* Establece el tamaño de fuente */
+  color: #111111; /* Establece el color del texto */
+  font-family: "oswald", sans-serif; /* Define la fuente */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
 }
-
 
 /* Establece estilos para los párrafos y los elementos con la clase '.precio' */
-.produc p, .precio {
-    font-size: 16px; /* Establece el tamaño de fuente */
-    color: #111111; /* Establece el color del texto */
-    margin-bottom: 15px; /* Añade margen inferior */
+.produc p,
+.precio {
+  font-size: 16px; /* Establece el tamaño de fuente */
+  color: #111111; /* Establece el color del texto */
+  margin-bottom: 15px; /* Añade margen inferior */
 }
 
-
 /* Establece estilos para el elemento con la clase '.precio' */
-.precio { 
-    font-weight: 800; /* Establece el grosor de la fuente */
+.precio {
+  font-weight: 800; /* Establece el grosor de la fuente */
 }
 
 /* Establece estilos para el contenedor de íconos */
-.icons { 
-    padding: 50px 0 100px 0; /* Añade relleno */
-    display: flex; /* Utiliza el modelo de caja flexible */
-    justify-content: space-between; /* Distribuye uniformemente los elementos secundarios */
+.icons {
+  padding: 50px 0 100px 0; /* Añade relleno */
+  display: flex; /* Utiliza el modelo de caja flexible */
+  justify-content: space-between; /* Distribuye uniformemente los elementos secundarios */
 }
 
 /* Establece estilos para los elementos con la clase '.icon-1' */
 .icon-1 {
-    flex-basis: calc(33.33% - 30px); /* Establece el tamaño base */
-    display: flex; /* Utiliza el modelo de caja flexible */
-    align-items: center; /* Centra verticalmente los elementos secundarios */
-    justify-content: space-around; /* Distribuye uniformemente los elementos secundarios */
-    padding: 25px; /* Añade relleno */
-    background-color: #f5f5f5; /* Establece el color de fondo */
+  flex-basis: calc(33.33% - 30px); /* Establece el tamaño base */
+  display: flex; /* Utiliza el modelo de caja flexible */
+  align-items: center; /* Centra verticalmente los elementos secundarios */
+  justify-content: space-around; /* Distribuye uniformemente los elementos secundarios */
+  padding: 25px; /* Añade relleno */
+  background-color: #f5f5f5; /* Establece el color de fondo */
 }
 
 /* Establece estilos para el encabezado h3 dentro de los elementos '.icon-1' */
 .icon-txt h3 {
-    font-size: 20px; /* Establece el tamaño de fuente */
-    color: #111111; /* Establece el color del texto */
-    font-family: 'oswald', sans-serif; /* Define la fuente */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  font-size: 20px; /* Establece el tamaño de fuente */
+  color: #111111; /* Establece el color del texto */
+  font-family: "oswald", sans-serif; /* Define la fuente */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
 }
 
 /* Establece estilos para los párrafos dentro de los elementos '.icon-1' */
 .icon-txt p {
-    font-size: 16px; /* Establece el tamaño de fuente */
-    color: #111111; /* Establece el color del texto */
+  font-size: 16px; /* Establece el tamaño de fuente */
+  color: #111111; /* Establece el color del texto */
 }
 
 /* Establece estilos para el contenedor del blog */
 .blog {
-    display: flex; /* Utiliza el modelo de caja flexible */
-    justify-content: space-between; /* Distribuye uniformemente los elementos secundarios */
-    padding-bottom: 100px; /* Añade margen inferior */
+  display: flex; /* Utiliza el modelo de caja flexible */
+  justify-content: space-between; /* Distribuye uniformemente los elementos secundarios */
+  padding-bottom: 100px; /* Añade margen inferior */
 }
 
 /* Establece estilos para los elementos con la clase '.blog-1' */
 .blog-1 {
-    flex-basis: calc(33.3% - 30px); /* Establece el tamaño base */
+  flex-basis: calc(33.3% - 30px); /* Establece el tamaño base */
 }
 
 /* Establece estilos para las imágenes dentro de los elementos '.blog-1' */
 .blog-1 img {
-    margin-bottom: 20px; /* Añade margen inferior */
+  margin-bottom: 20px; /* Añade margen inferior */
 }
 
 .blog h3 {
-    font-size: 20px; /* Establece el tamaño de fuente */
-    color: #111111; /* Establece el color del texto */
-    font-family: 'oswald', sans-serif; /* Define la fuente */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    margin-bottom: 15px; /* Añade margen inferior */
+  font-size: 20px; /* Establece el tamaño de fuente */
+  color: #111111; /* Establece el color del texto */
+  font-family: "oswald", sans-serif; /* Define la fuente */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  margin-bottom: 15px; /* Añade margen inferior */
 }
 
 /* Establece estilos para los párrafos dentro de los elementos '.blog-1' */
 .blog-1 p {
-    font-size: 16px; /* Establece el tamaño de fuente */
-    color: #111111; /* Establece el color del texto */
+  font-size: 16px; /* Establece el tamaño de fuente */
+  color: #111111; /* Establece el color del texto */
 }
-
 
 /* Establece estilos para el pie de página */
 .footer {
-    padding: 50px 0; /* Añade relleno */
-    background-color: #111111; /* Establece el color de fondo */
+  padding: 50px 0; /* Añade relleno */
+  background-color: #111111; /* Establece el color de fondo */
 }
 
 /* Establece estilos para el contenido del pie de página */
 .footer-content {
-    display: flex; /* Utiliza el modelo de caja flexible */
-    justify-content: space-around; /* Distribuye uniformemente los elementos secundarios */
+  display: flex; /* Utiliza el modelo de caja flexible */
+  justify-content: space-around; /* Distribuye uniformemente los elementos secundarios */
 }
 
 /* Establece estilos para el encabezado h3 dentro de elementos con la clase '.link' */
 .link h3 {
-    font-size: 18px; /* Establece el tamaño de fuente */
-    color: #ffffff; /* Establece el color del texto */
-    font-family: 'oswald', sans-serif; /* Define la fuente */
-    text-transform: uppercase; /* Convierte el texto a mayúsculas */
-    margin-bottom: 20px; /* Añade margen inferior */
+  font-size: 18px; /* Establece el tamaño de fuente */
+  color: #ffffff; /* Establece el color del texto */
+  font-family: "oswald", sans-serif; /* Define la fuente */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  margin-bottom: 20px; /* Añade margen inferior */
 }
 
 /* Establece estilos para los enlaces dentro de elementos con la clase '.link' */
 .link a {
-    font-size: 16px; /* Establece el tamaño de fuente */
-    color: #dcdcdc; /* Establece el color del texto */
-    display: block; /* Convierte los enlaces en bloques */
-    margin-bottom: 10px; /* Añade margen inferior */
+  font-size: 16px; /* Establece el tamaño de fuente */
+  color: #dcdcdc; /* Establece el color del texto */
+  display: block; /* Convierte los enlaces en bloques */
+  margin-bottom: 10px; /* Añade margen inferior */
 }
 
 .link {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 /* Formulario de contacto */
 
 .container-form {
-    width: 100%;
-    height: 70vh;
-    background-color: #ffffff;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+  width: 100%;
+  height: 70vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .form-content {
-    width: 100%;
-    max-width: 450px;
-    background-color: #2c2f35;
-    padding: 50px 60px 70px;
-    text-align: center;
-    border-radius: 25px;
+  width: 100%;
+  max-width: 450px;
+  background-color: #2c2f35;
+  padding: 50px 60px 70px;
+  text-align: center;
+  border-radius: 25px;
 }
 
 .form-content h1 {
-    font-size: 30px;
-    margin-bottom: 60px;
-    color: #ffffff;
-    position: relative;
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: #ffffff;
+  position: relative;
 }
 
 .form-content h1::after {
-    content: '';
-    width: 30px;
-    height: 4px;
-    border-radius: 3px;
-    background: #111111;
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
+  content: "";
+  width: 30px;
+  height: 4px;
+  border-radius: 3px;
+  background: #111111;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .input-field {
-    background-color: #515966;
-    margin: 15px 0;
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    transition: max-height 0.5s; 
-    overflow: hidden;
+  background-color: #515966;
+  margin: 15px 0;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  transition: max-height 0.5s;
+  overflow: hidden;
 }
 
 .input {
-    width: 100%;
-    background: transparent;
-    border: 0;
-    outline: none;
-    padding: 18px 15px;
-    color: #ffffff;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: none;
+  padding: 18px 15px;
+  color: #ffffff;
 }
 
 .input::placeholder {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .input-field i {
-    margin-left: 15px;
-    color: #111111;
+  margin-left: 15px;
+  color: #111111;
 }
 
 form p {
-    color: #ffffff;
-    text-align: left;
-    font-size: 13px;
+  color: #ffffff;
+  text-align: left;
+  font-size: 13px;
 }
 
 form p a {
-    color: #ffffff;
-    margin-left: 5px;
+  color: #ffffff;
+  margin-left: 5px;
 }
 
 .btn-field {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
 }
 
 .btn-field button {
-    flex-basis: 48%;
-    font-size: 16px;
-    background-color: #111111;
-    color: #ffffff;
-    height: 40px;
-    border-radius: 10px;
-    border: 0;
-    outline: none;
-    cursor: pointer; 
-    transition: background 1s;
+  flex-basis: 48%;
+  font-size: 16px;
+  background-color: #111111;
+  color: #ffffff;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  transition: background 1s;
 }
 
 .input-group {
-    height: 250px;
+  height: 250px;
 }
 
 .btn-field button.disable {
-    background-color: #eaeaea;
-    color: #111111;
+  background-color: #eaeaea;
+  color: #111111;
 }
 
 #condiciones {
-    color: #ffffff;
-    margin-top: 10px;
-    margin-right: 50px;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-right: 50px;
 }
 
 /* Logo de wpp flotante */
 
 .btn-wsp {
-    display: flex;
-    position: fixed;
-    right: 20px;
-    min-height: 80px;
-    min-width: 80px;
-    width: 5vw;
-    height: 5vw;
-    padding: 10px;
-    border-radius: 30%;
-    bottom: 20px;
-    background-color: #0df053;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
-    z-index: 100;
+  display: flex;
+  position: fixed;
+  right: 20px;
+  min-height: 80px;
+  min-width: 80px;
+  width: 5vw;
+  height: 5vw;
+  padding: 10px;
+  border-radius: 30%;
+  bottom: 20px;
+  background-color: #0df053;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
 }
 
-  
-.btn-wsp:hover { 
-    text-decoration: none;
-    color: #0df053;
-    background-color: #f9f9f9;
+.btn-wsp:hover {
+  text-decoration: none;
+  color: #0df053;
+  background-color: #f9f9f9;
 }
 
 /* Estilo para el main de quienes somos */
 .main-1 {
-    text-align: center;
-    color: black
+  text-align: center;
+  color: black;
 }
 
 /* Preguntas Frecuentes */
 #quienes-somos {
-    text-align:justify;
-    display: flex;
-    padding: 5vw 10vw;
-    justify-content: center;
-    font-size: 1.5rem;
+  text-align: justify;
+  display: flex;
+  padding: 5vw 10vw;
+  justify-content: center;
+  font-size: 1.5rem;
 }
 
 /* Preguntas Frecuentes */
 .pregFrecuen {
-    display: grid;
-    grid-template-rows: 1fr;
-    gap: 30px;
-    padding: 20px;
-    font-size: 1.3rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 30px;
+  padding: 20px;
+  font-size: 1.3rem;
 }
 
 .email {
-    color: blue;
-    text-decoration: none;
+  color: blue;
+  text-decoration: none;
 }
 
 .email:hover {
-    color: cornflowerblue;
-    text-decoration: none;
-    text-decoration: underline;
+  color: cornflowerblue;
+  text-decoration: none;
+  text-decoration: underline;
 }
 
 /* Establece estilos para los medios de comunicación cuando el ancho de la ventana es menor o igual a 991px */
-@media (max-width:991px) {
+@media (max-width: 991px) {
+  /* Establece estilos para el menú */
+  .menu {
+    /*  padding: 20px; */ /* Añade relleno */
+  }
 
-    /* Establece estilos para el menú */
-    .menu {
-       /*  padding: 20px; */ /* Añade relleno */
-    }
+  /* Establece estilos para los elementos 'label' dentro del menú */
+  .menu label {
+    display: initial; /* Muestra los elementos */
+    position: relative right;
+  }
 
-    /* Establece estilos para los elementos 'label' dentro del menú */
-    .menu label {
-        display: initial; /* Muestra los elementos */
-        position: relative right;
-    }
+  /* Establece estilos para la barra de navegación dentro del menú */
+  .menu .navbar {
+    position: absolute; /* Establece la posición absoluta */
+    top: 100%; /* Coloca la barra de navegación debajo del menú */
+    left: 0; /* Coloca la barra de navegación al inicio */
+    right: 0; /* Coloca la barra de navegación al final */
+    background-color: #181818; /* Establece el color de fondo */
+    display: none; /* Oculta la barra de navegación */
+  }
 
-    /* Establece estilos para la barra de navegación dentro del menú */
-    .menu .navbar {
-        position: absolute; /* Establece la posición absoluta */
-        top: 100%; /* Coloca la barra de navegación debajo del menú */
-        left: 0; /* Coloca la barra de navegación al inicio */
-        right: 0; /* Coloca la barra de navegación al final */
-        background-color: #181818; /* Establece el color de fondo */
-        display: none; /* Oculta la barra de navegación */
-    }
+  /* Establece estilos para los elementos de la lista dentro de la barra de navegación */
+  .menu .navbar ul li {
+    width: 100%; /* Establece el ancho al 100% */
+  }
 
-    /* Establece estilos para los elementos de la lista dentro de la barra de navegación */
-    .menu .navbar ul li {
-        width: 100%; /* Establece el ancho al 100% */
-    }
-    
-    /* Establece estilos para los enlaces dentro de los elementos de la lista de la barra de navegación */
-    .menu .navbar ul li a {
-        color: #ffffff; /* Establece el color del texto */
-    }
+  /* Establece estilos para los enlaces dentro de los elementos de la lista de la barra de navegación */
+  .menu .navbar ul li a {
+    color: #ffffff; /* Establece el color del texto */
+  }
 
-    /* Muestra la barra de navegación cuando el menú está marcado */
-    #menu:checked ~ .navbar {
-        display: initial; /* Muestra la barra de navegación */
-    }
-    
-    /* Oculta el logo */
-    .logo {
-        display: none; /* Oculta el logo */
-    }
+  /* Muestra la barra de navegación cuando el menú está marcado */
+  #menu:checked ~ .navbar {
+    display: initial; /* Muestra la barra de navegación */
+  }
 
-    /* Establece estilos para el carrito cuando se pasa el ratón por encima */
-    .submenu:hover #carrito {
-        min-width: 100%; /* Establece el ancho mínimo al 100% */
-    }
+  /* Oculta el logo */
+  .logo {
+    display: none; /* Oculta el logo */
+  }
 
-    /* Establece estilos para el encabezado cuando el ancho de la ventana es menor o igual a 991px */
-    .header {
-        min-height: 0vh; /* Establece la altura mínima al 0% */
-    }
+  /* Establece estilos para el carrito cuando se pasa el ratón por encima */
+  .submenu:hover #carrito {
+    min-width: 100%; /* Establece el ancho mínimo al 100% */
+  }
 
-    /* Establece estilos para el contenido del encabezado cuando el ancho de la ventana es menor o igual a 991px */
-    .header-content {
-        padding: 50px 0; /* Añade relleno */
-        flex-direction: column; /* Cambia la dirección de los elementos secundarios a columna */
+  /* Establece estilos para el encabezado cuando el ancho de la ventana es menor o igual a 991px */
+  .header {
+    min-height: 0vh; /* Establece la altura mínima al 0% */
+  }
 
-    }
+  /* Establece estilos para el contenido del encabezado cuando el ancho de la ventana es menor o igual a 991px */
+  .header-content {
+    padding: 50px 0; /* Añade relleno */
+    flex-direction: column; /* Cambia la dirección de los elementos secundarios a columna */
+  }
 
-    /* Oculta la imagen del encabezado */
-    .header-img {
-        display: none; /* Oculta la imagen */
-    }
+  /* Oculta la imagen del encabezado */
+  .header-img {
+    display: none; /* Oculta la imagen */
+  }
 
-    /* Establece estilos para el texto del encabezado cuando el ancho de la ventana es menor o igual a 991px */
-    .header-txt {
-        flex-basis: 100%; /* Establece el tamaño base al 100% */
-        text-align: center; /* Centra horizontalmente el texto */
-    }
+  /* Establece estilos para el texto del encabezado cuando el ancho de la ventana es menor o igual a 991px */
+  .header-txt {
+    flex-basis: 100%; /* Establece el tamaño base al 100% */
+    text-align: center; /* Centra horizontalmente el texto */
+  }
 
-    /* Establece estilos para el encabezado h1 dentro del texto del encabezado */
-    .header-txt h1 {
-        font-size: 70px; /* Establece el tamaño de fuente */
-    }
+  /* Establece estilos para el encabezado h1 dentro del texto del encabezado */
+  .header-txt h1 {
+    font-size: 70px; /* Establece el tamaño de fuente */
+  }
 
-    /* Establece estilos para el contenedor de ofertas cuando el ancho de la ventana es menor o igual a 991px */
-    .ofert {
-        padding: 30px 30px 0 30px; /* Añade relleno */
-        flex-direction: column; /* Cambia la dirección de los elementos secundarios a columna */
-    }
+  /* Establece estilos para el contenedor de ofertas cuando el ancho de la ventana es menor o igual a 991px */
+  .ofert {
+    padding: 30px 30px 0 30px; /* Añade relleno */
+    flex-direction: column; /* Cambia la dirección de los elementos secundarios a columna */
+  }
 
-    /* Establece estilos para los elementos de ofertas cuando el ancho de la ventana es menor o igual a 991px */
-    .ofert-1 {
-        margin-bottom: 30px; /* Añade margen inferior */
-    }
+  /* Establece estilos para los elementos de ofertas cuando el ancho de la ventana es menor o igual a 991px */
+  .ofert-1 {
+    margin-bottom: 30px; /* Añade margen inferior */
+  }
 
-    /* Establece estilos para el contenedor de productos cuando el ancho de la ventana es menor o igual a 991px */
-    .products {
-        padding: 0 30px 30px 30px; /* Añade relleno */
-    }
+  /* Establece estilos para el contenedor de productos cuando el ancho de la ventana es menor o igual a 991px */
+  .products {
+    padding: 0 30px 30px 30px; /* Añade relleno */
+  }
 
-    /* Establece estilos para el encabezado h2 dentro del contenedor de productos */
-    .products h2 {
-        margin-bottom: 30px; /* Añade margen inferior */
-    }
+  /* Establece estilos para el encabezado h2 dentro del contenedor de productos */
+  .products h2 {
+    margin-bottom: 30px; /* Añade margen inferior */
+  }
 
-    /* Establece estilos para el contenido de productos cuando el ancho de la ventana es menor o igual a 991px */
-    .product-content {
-        grid-template-columns: repeat(1, 1fr); /* Crea una cuadrícula de una sola columna */
-        gap: 30px; /* Añade espacio entre las columnas */
-    }
+  /* Establece estilos para el contenido de productos cuando el ancho de la ventana es menor o igual a 991px */
+  .product-content {
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Crea una cuadrícula de una sola columna */
+    gap: 30px; /* Añade espacio entre las columnas */
+  }
 
-    /* Establece estilos para las imágenes de productos cuando el ancho de la ventana es menor o igual a 991px */
-    .product img {
-        width: 200px; /* Establece el ancho de la imagen */
-        height: 280px; /* Establece la altura de la imagen */
-    }
+  /* Establece estilos para las imágenes de productos cuando el ancho de la ventana es menor o igual a 991px */
+  .product img {
+    width: 200px; /* Establece el ancho de la imagen */
+    height: 280px; /* Establece la altura de la imagen */
+  }
 
-    /* Establece estilos para el contenedor de íconos cuando el ancho de la ventana es menor o igual a 991px */
-    .icons {
-        padding: 30px; /* Añade relleno */
-        flex-direction: column; /* Cambia la dirección de los elementos secundarios a columna */
-    }
+  /* Establece estilos para el contenedor de íconos cuando el ancho de la ventana es menor o igual a 991px */
+  .icons {
+    padding: 30px; /* Añade relleno */
+    flex-direction: column; /* Cambia la dirección de los elementos secundarios a columna */
+  }
 
-    /* Establece estilos para los elementos de íconos cuando el ancho de la ventana es menor o igual a 991px */
-    .icon-1 {
-        margin-bottom: 30px; /* Añade margen inferior */
-    }
+  /* Establece estilos para los elementos de íconos cuando el ancho de la ventana es menor o igual a 991px */
+  .icon-1 {
+    margin-bottom: 30px; /* Añade margen inferior */
+  }
 
-    /* Establece estilos para el contenedor del blog cuando el ancho de la ventana es menor o igual a 991px */
-    .blog {
-        padding: 0 30px 30px 30px; /* Añade relleno */
-        flex-direction: column; /* Cambia la dirección de los elementos secundarios a columna */
-    }
+  /* Establece estilos para el contenedor del blog cuando el ancho de la ventana es menor o igual a 991px */
+  .blog {
+    padding: 0 30px 30px 30px; /* Añade relleno */
+    flex-direction: column; /* Cambia la dirección de los elementos secundarios a columna */
+  }
 
-    /* Establece estilos para los elementos de blog cuando el ancho de la ventana es menor o igual a 991px */
-    .blog-1 {
-        margin-bottom: 30px; /* Añade margen inferior */
-    }
+  /* Establece estilos para los elementos de blog cuando el ancho de la ventana es menor o igual a 991px */
+  .blog-1 {
+    margin-bottom: 30px; /* Añade margen inferior */
+  }
 
-    /* Establece estilos para el pie de página cuando el ancho de la ventana es menor o igual a 991px */
-    .footer {
-        padding: 30px; /* Añade relleno */
-    }
+  /* Establece estilos para el pie de página cuando el ancho de la ventana es menor o igual a 991px */
+  .footer {
+    padding: 30px; /* Añade relleno */
+  }
 
-    /* Establece estilos para el contenido del pie de página cuando el ancho de la ventana es menor o igual a 991px */
-    .footer-content {
-        flex-direction: column; /* Cambia la dirección de los elementos secundarios a columna */
-        text-align: center; /* Centra horizontalmente el texto */
-    }
+  /* Establece estilos para el contenido del pie de página cuando el ancho de la ventana es menor o igual a 991px */
+  .footer-content {
+    flex-direction: column; /* Cambia la dirección de los elementos secundarios a columna */
+    text-align: center; /* Centra horizontalmente el texto */
+  }
+}
+/* Formulario de contacto */
+.container-form1 {
+  width: 100%;
+  height: 90vh;
+  background-color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.form-content1 {
+  width: 100%;
+  height: 90vh;
+  max-width: 450px;
+  background-color: #2c2f35;
+  padding: 50px 60px 70px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.input-field1 {
+  background-color: #2c2f35;
+  margin: 15px 0;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  transition: max-height 0.5s;
+  overflow: hidden;
+}
+
+.input::placeholder {
+  color: #ffffff;
+}
+
+.input input {
+  border-radius: 5px;
+}
+
+.btn-field1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.btn-field1 button {
+  flex-basis: 48%;
+  font-size: 16px;
+  background-color: #111111;
+  color: #ffffff;
+  height: 40px;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  transition: background 1s;
 }
