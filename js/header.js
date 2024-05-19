@@ -43,7 +43,7 @@ let miHeader = `
             </div>
             <div class="header-content container">
                 <div class="header-img">
-                    <img src="/cacerolas.varias.png" alt="">
+                <img src="/images/cacerolas.varias.png" alt="" />
                 </div>
                 <div class="header-txt">
                     <h1>Bienvenido a nuestro servicio de restauración de productos de bazar</h1>
