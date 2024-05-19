@@ -1,17 +1,6 @@
-
-
-function main() {
-    
-}
-
-main();
-
-
-
-
 const carrito = document.getElementById('carrito');
 const elementos1 = document.getElementById('lista-1');
-const listaCarrito = document.querySelector('#lista-carrito > tbody');
+const lista = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
 
 cargarEventListeners();
@@ -94,60 +83,4 @@ signUp.onclick = function() {
     signUp.classList.remove("disable");
     signIn.classList.add("disable");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function App () {}
-
-    window.onload = function(ovent) {
-        var app = new App();
-        window.app = app;
-    }
-
-    App.prototype.processingButton = function(event) {
-
-        const btn = event.currentTarget;
-        const carrusellist = event.currentTarget.parentNode;
-        const tranck = event.currentTarget.parentNode.querySelector('#track');
-        const carrusel = track.querySelectorAll('.carrusel');
-
-        const carruselWidth = carrusel[0].offsetWidth;
-        const trackWidth = track.offsetWidth
-        const listWidth =carrusellist.offsetWidth;
-
-        tranck.style.left == "" ? leftPosition = track.style.left = 0 : leftPosition = parseFloat(track.style.left.slice(0,-2)*-1)
-        btn.dataset.button == "button-prev" ? prevAction(leftPosition,carruselWidth, track) : nextAction(leftPosition,trackWidth, listWidth, carruselWidth, track)
-    }
-
-    let prevAction = (leftPosition, carruselWidth, track) => {
-        if (leftPosition > 0){
-            track.style.left = `${-1 * (leftPosition - carruselWidth)}px`;
-        }
-    }
-
-    let nextAction = (leftPosition, trackWidth, listWidth, carruselWidth, track) => {
-        if (leftPosition < (trackWidth - listWidth)) {
-            track.style.left = `${-1 * (leftPosition + carruselWidth)}px`;
-        }
-    }
 
