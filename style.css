@@ -585,7 +585,7 @@ form p a {
 @media (max-width: 991px) {
   /* Establece estilos para el menú */
   .menu {
-    /*  padding: 20px; */ /* Añade relleno */
+     padding: 20px; 
   }
 
   /* Establece estilos para los elementos 'label' dentro del menú */
