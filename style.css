@@ -60,7 +60,7 @@ header {
   display: flex; /* Utiliza el modelo de caja flexible */
   align-items: center; /* Centra verticalmente los elementos secundarios */
   justify-content: center; /* Distribuye uniformemente los elementos secundarios */
-  background-color: rgb(222, 184, 135, 0.1);
+  background-color: rgba(223, 191, 149, 0.1);
   backdrop-filter: blur(10px);
 }
 

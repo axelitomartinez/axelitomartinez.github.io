@@ -16,6 +16,7 @@ let miHeader = `
                         <li><a href="/index.html">Inicio</a></li>
                         <li><a href="/Servicios.html">Servicios</a></li>
                         <li><a href="/Productos.html">Productos</a></li>
+                        <li><a href="./preguntas_frecuentes.html">Preguntas frecuentes</a></li>
                         <li><a href="/Contacto.html">Contactos</a></li>
                     </ul>
                 </nav>
