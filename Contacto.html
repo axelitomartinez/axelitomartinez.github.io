@@ -14,7 +14,7 @@
     <header>
        
     </header>
-    <form action="">
+    <form action="" name="formulario">
 
 
         <h2>
@@ -25,15 +25,15 @@
         <div class="form_input">
           <fieldset>
             <legend>INFORMACION BASICA</legend>
-          <input type="Nombre" placeholder="Nombre " id="nombre" required>
-          <input type="Apellido" placeholder="Apellido" required>
-          <input type="Edad" placeholder="Edad">
+          <input type="text" placeholder="Nombre " id="nombre">
+          <input type="text" placeholder="Apellido" id="apellido">
+          <input type="text" placeholder="Edad" id="edad">
         </fieldset>
     
         <fieldset>
           <legend>INFORMACION DE CONTACTO</legend>
-          <input type="Email" placeholder="Email" id="Email" required>
-          <input type="text" placeholder="Telefono" id="Telefono" required>
+          <input type="email" placeholder="Email" id="email">
+          <input type="text" placeholder="Telefono" id="telefono">
         </fieldset>
     
     
@@ -42,8 +42,9 @@
     
     <!-- Select & option -->
         <div class="form_input">
-          <label for="">¿Que pieza queres restaurar?
-            <select>
+          <label for="">¿Que pieza deseas restaurar?
+            <select id="pieza">
+              <option value="Cacerola">Seleccionar</option>
               <option value="Cacerola">Cacerola de 24cm a 26cm</option>
               <option value="Cacerola">Sarten de 24cm a 26cm</option>
               <option value="Cacerola">Bifera de 26cm a 29cm</option>
@@ -85,11 +86,11 @@
     
         <div class="form_input">
           <label>Acepto <a href="/terminos.html" target="_blank">Terminos y Condiciones</a>
-          <input type="checkbox" class="checkbox">
+          <input type="checkbox" class="checkbox" id="terminos">
         </label>
         </div>
     
-        <div><button>Enviar</button></div>
+        <div><button type="submit" id="b1">Enviar</button></div>
       </form>
 <br>
 <br>
@@ -104,5 +105,6 @@
     </a>
     <script src="./js/header.js"></script>
     <script src="./js/footer.js"></script>
+    <script src="./js/validacion.js"></script>
 
 </html>
