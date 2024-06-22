@@ -19,6 +19,7 @@ let miHeader = `
                         <li><a href="/template/preguntas_frecuentes.html">Preguntas frecuentes</a></li>
                         <li><a href="/template/Contacto.html">Contacto</a></li>
                         <li><a href="/template/Quienes-somos.html">Quienes Somos</a></li>
+                        <li><a href="/C.R.U.D/index.html">C.R.U.D</a></li>
                     </ul>
                 </nav>
                 <div>
