@@ -9,7 +9,7 @@ let miFooter = `
     <div class="link">
         <h3>Quienes somos</h3>
         <ul>
-            <li><a href="/Quienes-somos.html">Empresa</a></li>
+      <li><a href="/template/Quienes-somos.html">Empresa</a></li>
         </ul>
     </div>
 
