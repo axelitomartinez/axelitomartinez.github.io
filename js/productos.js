@@ -1,7 +1,7 @@
 let misProductos = ``
 
 for (let elemento of productos){
-    misProductos = misProductos + `
+    misProductos += `
     <div class="product">
                 <img src=${elemento.imagen}" alt="">
                 <div class="product-txt">

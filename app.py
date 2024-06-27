@@ -1,3 +1,10 @@
+"""
+ESTE CÓDIGO SE DEBE COPIAR EN EL ARCHIVO flask_app.py DE PYHTONANYWHERE.
+
+PYTHONANYWHERE ALOJARÁ LA BASE DE DATOS PARA QUE NUESTRA PÁGINA TENGA PERSISTENCIA DE DATOS,
+TAMBIÉN EJECUTARÁ ESTE CÓDIGO PARA QUE FUNCIONE LA API.
+"""
+
 #--------------------------------------------------------------------
 # Instalar con pip install Flask
 from flask import Flask, request, jsonify, render_template
@@ -15,6 +22,7 @@ from werkzeug.utils import secure_filename
 # No es necesario instalar, es parte del sistema standard de Python
 import os
 import time
+import json
 #--------------------------------------------------------------------
 
 
@@ -117,17 +125,34 @@ class Catalogo:
 #--------------------------------------------------------------------
 # Cuerpo del programa
 #--------------------------------------------------------------------
+
+# Se espera que la working directory sea home/USUARIO/
+ROOT = './mysite'
+
+config_file_path = ROOT+'/config.json'
+try:
+    with open(config_file_path, 'r') as config_file:
+        config = json.load(config_file)
+except FileNotFoundError:
+    print(f"Error: The file {config_file_path} was not found.")
+    config = {}
+except json.JSONDecodeError as e:
+    print(f"Error: Could not decode JSON. {e}")
+    config = {}
+
+HOST_URL = config["HOST_URL"]
+HOST_USER = config["HOST_USER"]
+HOST_PASSWORD = config["HOST_PASSWORD"]
+HOST_DATABASE = config["HOST_DATABASE"]
+
 # Crear una instancia de la clase Catalogo
-catalogo = Catalogo(host='localhost', user='root', password='root', database='miapp')
+catalogo = Catalogo(host=HOST_URL, user=HOST_USER, password=HOST_PASSWORD, database=HOST_DATABASE)
 
 #catalogo = Catalogo(host='USUARIO.mysql.pythonanywhere-services.com', user='USUARIO', password='CLAVE', database='USUARIO$miapp')
 
 
 # Carpeta para guardar las imagenes.
-RUTA_DESTINO = './static/imagenes/'
-
-#Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-#RUTA_DESTINO = '/home/USUARIO/mysite/static/imagenes'
+RUTA_DESTINO = ROOT+'/static/imagenes/'
 
 
 #--------------------------------------------------------------------

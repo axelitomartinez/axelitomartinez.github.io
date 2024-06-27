@@ -13,7 +13,7 @@ let miHeader = `
                 </label>
                 <nav class="navbar">
                     <ul>
-                        <li><a href="/template/index.html">Inicio</a></li>
+                        <li><a href="/index.html">Inicio</a></li>
                         <li><a href="/template/Servicios.html">Servicios</a></li>
                         <li><a href="/template/Productos.html">Productos</a></li>
                         <li><a href="/template/preguntas_frecuentes.html">Preguntas frecuentes</a></li>
