@@ -6,11 +6,12 @@ font-family: 'Poppins', sans-serif;
 */
 
 * {
-  margin: 0; /* Elimina el margen exterior */
-  padding: 10; /* Elimina el relleno */
-  box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y alto totales */
-  text-decoration: none; /* Elimina la decoración de texto */
-  list-style: none; /* Elimina los marcadores de lista predeterminados */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif; /* Aquí establecí la fuente principal */
 }
 
 /* Establece estilos para el elemento 'body' */
@@ -188,14 +189,14 @@ td {
 /* Empieza el sub menu (restauracion de piezas antiadhrente/pulido/repuestos */
 /* Establece estilos para los botones con la clase '.btn-1' */
 .btn-1 {
-  display: inline-block; /* Convierte el elemento en un bloque en línea */
-  background-color: #111111; /* Establece el color de fondo */
-  color: #ffffff; /* Establece el color del texto */
-  border-radius: 5px; /* Establece el radio de borde */
-  padding: 12px 25px; /* Añade relleno */
+  display: inline-block;
+  background-color: #111111; /* Establecí el color de fondo del botón */
+  color: #ffffff; /* Establecí el color del texto del botón */
+  border-radius: 5px;
+  padding: 12px 25px;
+  transition: all 0.1s ease-in-out;
 }
 .btn-1:hover {
-  transition: all 0.1s ease-in-out;
   transform: scale(1.1);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
@@ -384,8 +385,12 @@ td {
 
 /* Establece estilos para el contenido del pie de página */
 .footer-content {
-  display: flex; /* Utiliza el modelo de caja flexible */
-  justify-content: space-around; /* Distribuye uniformemente los elementos secundarios */
+  display: flex;
+  justify-content: space-around;
+  background-color: #0c0c0c;
+  width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+  padding: 20px 0; /* Ajusta el relleno según sea necesario */
+  margin: 0; /* Elimina márgenes que puedan existir por defecto */
 }
 
 /* Establece estilos para el encabezado h3 dentro de elementos con la clase '.link' */
@@ -803,5 +808,98 @@ a {
 
 h2 {
   color: white;
+}
+
+/* C.R.U.D */
+
+/* Estilos de contenedores */
+.contenedor-centrado {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Logo centrado */
+.logo-centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px 0 5px 0;
+}
+
+/* Estilos para tablas y formularios */
+form, table {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #111111;
+  border: 1px solid lightslategray;
+  border-radius: 5px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos de textos */
+p {
+  background-color: #f9f9f9;
+
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  color: #111111;
+}
+
+a, button {
+  padding: 8px;
+  margin: 4px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 85%;
+  font-weight: 800;
+}
+
+a:hover, button:hover {
+  background-color: #0056b3;
+}
+
+.borrar {
+  background-color: #111111;
+  border-radius: 50%;
+  padding: 5px 10px;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* Estilos de botones */
+.btn-1, .btn-2 {
+  display: inline-block;
+  background-color: #111111;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.btn-1 {
+  padding: 12px 25px;
+}
+
+.btn-2 {
+  padding: 7px 18px;
+  font-size: 15px;
+}
+
+.btn-1:hover, .btn-2:hover {
+  transition: all 0.1s ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.mail-enlance {
+  color: #0c0c0c;
 }
 

@@ -1,4 +1,5 @@
 /* Estilos para todo el proyecto */
+/* Estilos para todo el proyecto */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 *{
     font-family: 'Quicksand', sans-serif;
@@ -132,4 +133,3 @@ a:hover {
     background-color: #0056b3;
     color:#ffffff;
 }
-
