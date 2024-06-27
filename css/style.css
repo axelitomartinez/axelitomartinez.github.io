@@ -653,7 +653,7 @@ form p a {
 
   /* Establece estilos para el encabezado h1 dentro del texto del encabezado */
   .header-txt h1 {
-    font-size: 70px; /* Establece el tamaño de fuente */
+    font-size: 4em; /* Establece el tamaño de fuente */
   }
 
   /* Establece estilos para el contenedor de ofertas cuando el ancho de la ventana es menor o igual a 991px */
