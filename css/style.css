@@ -649,12 +649,16 @@ form p a {
   .header-txt {
     flex-basis: 100%; /* Establece el tamaño base al 100% */
     text-align: center; /* Centra horizontalmente el texto */
+    text-wrap: pretty;
+    
   }
 
   /* Establece estilos para el encabezado h1 dentro del texto del encabezado */
   .header-txt h1 {
-    font-size: 15vw !important; /* Establece el tamaño de fuente */
-    text-wrap: pretty;
+    font-size: min(18vw, 60px); /* Establece el tamaño de fuente */
+  }
+  .header-txt p {
+    font-size: min(6vw, 20px);
   }
 
   /* Establece estilos para el contenedor de ofertas cuando el ancho de la ventana es menor o igual a 991px */
