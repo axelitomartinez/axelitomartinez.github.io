@@ -5,7 +5,7 @@ let miHeader = `
     <div class="menu container">
                     <!-- Logo -->
                     <div>
-                        <a href="/"><img src="/images/img/logonegro2.png" alt="logo" class="logo"></a>
+                        <img src="/images/img/logonegro2.png" alt="logo" class="logo">
                     </div>
                 <input type="checkbox" id="menu"/>
                 <label for="menu">
