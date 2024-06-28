@@ -14,11 +14,6 @@ font-family: 'Poppins', sans-serif;
   font-family: "Poppins", sans-serif; /* Aquí establecí la fuente principal */
 }
 
-/* Establece estilos para el elemento 'body' */
-body {
-  font-family: "Poppins", sans-serif; /* Define la fuente principal */
-}
-
 /* Establece estilos para los elementos 'img' */
 img {
   max-width: 100%; /* Garantiza que las imágenes no se extiendan más allá de su contenedor */
@@ -303,7 +298,7 @@ td {
 }
 
 /* Establece estilos para los párrafos y los elementos con la clase '.precio' */
-.produc p,
+.product p,
 .precio {
   font-size: 16px; /* Establece el tamaño de fuente */
   color: #111111; /* Establece el color del texto */

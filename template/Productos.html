@@ -21,7 +21,7 @@
 
         <div class="product-content">
             
-            <div class="product">
+            <!-- <div class="product">
                 <img src="/images/fotos/sarten20cm.png" alt="">
                 <div class="product-txt">
                     <h3>Sarten 20cm color azul</h3>
@@ -79,14 +79,64 @@
                     <p class="precio">$200</p>
                     <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar al carrito</a>
                 </div>
-            </div>
+            </div> -->
         </div>
-
     </main>
 
+    <script>
+        // const URL = "http://127.0.0.1:5000/"
+
+        // Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
+        const URL = "https://zhl27.pythonanywhere.com/"
+        
+
+        // Realizamos la solicitud GET al servidor para obtener todos los productos.
+        fetch(URL + 'productos')
+            .then(function (response) {
+                if (response.ok) {
+                    //Si la respuesta es exitosa (response.ok), convierte el cuerpo de la respuesta de formato JSON a un objeto JavaScript y pasa estos datos a la siguiente promesa then.
+                    return response.json(); 
+            } else {
+                    // Si hubo un error, lanzar explícitamente una excepción para ser "catcheada" más adelante
+                    throw new Error('Error al obtener los productos.');
+                }
+            })
+
+            //Esta función maneja los datos convertidos del JSON.
+            .then(function (data) {              
+                let productContainer = document.querySelector("#lista-1 > .product-content"); //Selecciona el elemento del DOM donde se mostrarán los productos.
+                // Iteramos sobre cada producto y agregamos filas a la tabla
+                for (let producto of data) {
+                    let panel = document.createElement('div'); //Crea un nuevo panel de producto.
+                    panel.classList.add('product');
+
+                    let imagen = "https://www.pythonanywhere.com/user/zhl27/files/home/zhl27/mysite/static/imagenes/"+producto['imagen_url'];
+                    let descripcion = producto['descripcion'];
+                    let precio = producto['precio'];
+                    let cantidad = producto['cantidad'];
+
+                    panel.innerHTML =  `
+                        <img src=${imagen} alt="${descripcion}">
+                        <div class="product-txt">
+                            <h3>${descripcion}</h3>
+                            <p class="cantidad">En Stock: ${cantidad}</p>
+                            <p class="precio">$${precio}</p>
+                            <a href="#" class="agregar-carrito btn-2" data-id="6">Agregar al carrito</a>
+                        </div>
+                    `
+                    // Una vez creado el panel, se agrega al contenedor de productos
+                    productContainer.appendChild(panel);
+                }
+            })
+
+            //Captura y maneja errores, mostrando una alerta en caso de error al obtener los productos.
+            .catch(function (error) {
+                // Código para manejar errores
+                alert('Error al obtener los productos.');
+            });
+    </script>
+
     <footer class="footer">
-
-
     </footer>
 
     <a href="https://wa.me/541130748502?text=Hola quiero informacion de su negocio" class="btn-wsp" target="_blank"> 
