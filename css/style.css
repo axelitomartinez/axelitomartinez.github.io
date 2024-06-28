@@ -411,7 +411,7 @@ td {
 
 /* Formulario de contacto */
 
-.container-form {
+/* .container-form {
   width: 100%;
   height: 70vh;
   background-color: #ffffff;
@@ -474,7 +474,7 @@ td {
 .input-field i {
   margin-left: 15px;
   color: #111111;
-}
+} */
 
 form p {
   color: #ffffff;
@@ -520,9 +520,9 @@ form p a {
   color: #ffffff;
   margin-top: 10px;
   margin-right: 50px;
-}
+} 
 
-/* Logo de wpp flotante */
+/* LOGO DE WHATSAPP FLOTANTE */
 
 .btn-wsp {
   display: flex;
@@ -581,11 +581,197 @@ form p a {
   text-decoration: underline;
 }
 
+/* FORMULARIOS EN GENERAL*/
+
+form { 
+  background-color: #2c2f35;
+  padding: 10px 20px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0px 0px 35px ;
+  margin-top: 50px;
+  border-radius: 8px;
+  text-align: auto;
+}
+
+.form_input {
+  padding: 10px 20px;
+  color: #eee;
+  
+}
+
+input, textarea, select {
+
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border: 1px solid #222;
+  box-shadow: 0px 0px 15px #0003;
+  background-color: transparent;
+  color: #eee;
+  margin: 6px 0;
+}
+
+fieldset {
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+legend {
+  padding: 0 6px;
+  border: 1px solid;
+}
+
+option {
+  background-color: #222;
+}
+
+textarea {
+  min-width: 100%;
+  resize: vertical;
+  min-height: 100px;
+  max-height: 200px;
+  
+}
+
+label {
+  color: white;
+  font-size: 0.88em;
+  line-height: 2;
+}
+
+.checkbox {
+
+  width: auto;
+  height: 10px;
+}
+
+/* a {
+  color: #69f;
+  text-decoration: none;
+} */
+
+.imagen {
+  margin: 50px;
+  text-align: center;
+  float: right;
+}
+
+h2 {
+  color: white;
+}
+
+/* C.R.U.D */
+
+/* Estilos de contenedores */
+.contenedor-centrado {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Logo centrado */
+.logo-centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 120px 0 5px 0;
+}
+
+/* Estilos para tablas y formularios */
+form, table {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #111111;
+  border: 1px solid lightslategray;
+  border-radius: 5px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos de textos */
+p {
+  background-color: #f5f5f5f5;
+
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  color: #111111;
+}
+
+button {
+  padding: 8px;
+  margin: 4px;
+  color: #fffffff4;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 85%;
+  font-weight: 800;
+} 
+
+/* a:hover, button:hover {
+  background-color: #5390d2;
+} */
+
+.borrar {
+  background-color: #111111;
+  border-radius: 50%;
+  padding: 5px 10px;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* Estilos de botones */
+.btn-1, .btn-2 {
+  display: inline-block;
+  background-color: #111111;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.btn-1 {
+  padding: 12px 25px;
+}
+
+.btn-2 {
+  padding: 7px 18px;
+  font-size: 15px;
+}
+
+.btn-1:hover, .btn-2:hover {
+  transition: all 0.1s ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.mail-enlance {
+  color: #0c0c0c;
+}
+
+.btn-black {
+  padding: 8px;
+  margin: 4px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 85%;
+  font-weight: 800;
+  background-color: #111111;
+}
+
 /* Establece estilos para los medios de comunicación cuando el ancho de la ventana es menor o igual a 991px */
 @media (max-width: 991px) {
   /* Establece estilos para el menú */
   .menu {
-     padding: 20px; 
+      padding: 20px; 
   }
 
   /* Establece estilos para los elementos 'label' dentro del menú */
@@ -731,187 +917,3 @@ form p a {
   }
 }
 /* Formulario de contacto */
-
-form { 
-  background-color: #222;
-  padding: 10px 20px;
-  max-width: 400px;
-  margin: auto;
-  box-shadow: 0px 0px 35px ;
-  margin-top: 50px;
-  border-radius: 8px;
-  text-align: auto;
-}
-
-.form_input {
-  padding: 10px 20px;
-  color: #eee;
-
-}
-
-input, textarea, select {
-
-  width: 100%;
-  box-sizing: border-box;
-  padding: 6px 8px;
-  border: 1px solid #222;
-  box-shadow: 0px 0px 15px #0003;
-  background-color: transparent;
-  color: #eee;
-  margin: 6px 0;
-}
-
-fieldset {
-  margin: 20px 0;
-  border-radius: 5px;
-}
-
-legend {
-  padding: 0 6px;
-  border: 1px solid;
-}
-
-option {
-  background-color: #222;
-}
-
-textarea {
-  min-width: 100%;
-  resize: vertical;
-  min-height: 100px;
-  max-height: 200px;
-
-}
-
-label {
-  color: white;
-  font-size: 0.88em;
-  line-height: 2;
-}
-
-.checkbox {
-
-  width: auto;
-  height: 10px;
-}
-
-a {
-  color: #69f;
-  text-decoration: none;
-}
-
-.imagen {
-  margin: 50px;
-  text-align: center;
-  float: right;
-}
-
-h2 {
-  color: white;
-}
-
-/* C.R.U.D */
-
-/* Estilos de contenedores */
-.contenedor-centrado {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-/* Logo centrado */
-.logo-centrado {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 120px 0 5px 0;
-}
-
-/* Estilos para tablas y formularios */
-form, table {
-  max-width: 90%;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #111111;
-  border: 1px solid lightslategray;
-  border-radius: 5px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* Estilos de textos */
-p {
-  background-color: #f5f5f5f5;
-
-  margin: 20px auto;
-  padding: 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  text-align: center;
-  color: #111111;
-}
-
-a, button {
-  padding: 8px;
-  margin: 4px;
-  color: #fffffff4;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 85%;
-  font-weight: 800;
-}
-
-a:hover, button:hover {
-  background-color: #0056b3;
-}
-
-.borrar {
-  background-color: #111111;
-  border-radius: 50%;
-  padding: 5px 10px;
-  color: #ffffff;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-/* Estilos de botones */
-.btn-1, .btn-2 {
-  display: inline-block;
-  background-color: #111111;
-  color: #ffffff;
-  border-radius: 5px;
-}
-
-.btn-1 {
-  padding: 12px 25px;
-}
-
-.btn-2 {
-  padding: 7px 18px;
-  font-size: 15px;
-}
-
-.btn-1:hover, .btn-2:hover {
-  transition: all 0.1s ease-in-out;
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.mail-enlance {
-  color: #0c0c0c;
-}
-
-.btn-black {
-  padding: 8px;
-  margin: 4px;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 85%;
-  font-weight: 800;
-  background-color: #111111;
-}
