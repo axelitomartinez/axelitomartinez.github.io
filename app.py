@@ -53,14 +53,12 @@ except json.JSONDecodeError as e:
 
 HOST_URL = config["HOST_URL"]
 HOST_USER = config["HOST_USER"]
+HOST_PASSWORD = config["HOST_PASSWORD"]
+HOST_DATABASE = config["HOST_DATABASE"]
 
 # Crear una instancia de la clase Catalogo
-catalogo = Catalogo(host=HOST_URL, user=HOST_USER, 
-                    password=config["HOST_PASSWORD"], 
-                    database=config["HOST_DATABASE"])
-usuarios = Usuarios(host=HOST_URL, user=HOST_USER, 
-                    password=config["HOST_PASSWORD"], 
-                    database=config["HOST_DATABASE"])
+catalogo = Catalogo(host=HOST_URL, user=HOST_USER, password=HOST_PASSWORD, database=HOST_DATABASE)
+usuarios = Usuarios(host=HOST_URL, user=HOST_USER, password=HOST_PASSWORD, database=HOST_DATABASE)
 
 
 
