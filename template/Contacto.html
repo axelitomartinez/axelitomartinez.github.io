@@ -1,110 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BazarSur</title>
-    <!-- Favicon -->
-    <link rel="icon" href="/images/img/favicon.bazar.ico">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BazarSur</title>
+  <!-- Favicon -->
+  <link rel="icon" href="/images/img/favicon.bazar.ico">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <header>
+  <header>
 
-    </header>
-    <form action="" name="formulario">
+  </header>
+  <form action="" name="formulario">
 
 
-        <h2>
-          Formulario de Contacto
-        </h2>
-    
+    <h2>
+      Formulario de Contacto
+    </h2>
+
     <!-- Simple Inputs -->
-        <div class="form_input">
-          <fieldset>
-            <legend>INFORMACION BASICA</legend>
-          <input type="text" placeholder="Nombre " id="nombre">
-          <input type="text" placeholder="Apellido" id="apellido">
-          <input type="text" placeholder="Edad" id="edad">
-        </fieldset>
-    
-        <fieldset>
-          <legend>INFORMACION DE CONTACTO</legend>
-          <input type="email" placeholder="Email" id="email">
-          <input type="text" placeholder="Telefono" id="telefono">
-        </fieldset>
-    
-    
-        </div>
-    
-    
+    <div class="form_input">
+      <fieldset>
+        <legend>INFORMACIÓN BÁSICA</legend>
+        <input type="text" placeholder="Nombre " id="nombre" required>
+        <input type="text" placeholder="Apellido" id="apellido" required>
+        <input type="number" placeholder="Edad" id="edad" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>INFORMACIÓN DE CONTACTO</legend>
+        <input type="email" placeholder="Email" id="email" required>
+        <input type="tel" placeholder="Telefono" id="telefono" required>
+      </fieldset>
+
+
+    </div>
+
+
     <!-- Select & option -->
-        <div class="form_input">
-          <label for="">¿Que pieza deseas restaurar?
-            <select id="pieza">
-              <option value="Cacerola">Seleccionar</option>
-              <option value="Cacerola">Cacerola de 24cm a 26cm</option>
-              <option value="Cacerola">Sarten de 24cm a 26cm</option>
-              <option value="Cacerola">Bifera de 26cm a 29cm</option>
-              <option value="Cacerola">Paellera/Pizzera/Ovalada de 30cm a 33cm</option>
-              <option value="Cacerola">Cacerola Doble/Sarten Doble de 24cm a 30cm</option>
-              <option value="Cacerola">Cuadrada/Olla/Rectangular de 28cm a 30cm</option>
-              <option value="Cacerola">Jarro/Pava/Cafetera</option>
-              <option value="Cacerola">Tostador Simple/Doble</option> 
-              <option value="Cacerola">Budinera o otros complementos</option>
-          </label>
-          </select>
-        </div>
-    
-    
-    
-    
-        <!-- Datalist & Option -->
-        <div class="form_input">
-          <label for="">¿Por donde nos conociste?
-            <input list="Referente" name="Referente">
-            <datalist id="Referente">
-              <option value="Red Social">Instagram/Facebook</option>
-              <option value="Recomendacion familiar">Un Amigo/familiar</option>
-              <option value="Recomendacion Empresa">Una empresa/Negocio</option>
-          </label>
-          </select>
-        </div>
-    
+    <div class="form_input">
+      <label for="">¿Qué pieza deseas restaurar?
+        <select id="pieza" required>
+          <option value="Cacerola">Seleccionar</option>
+          <option value="Cacerola">Cacerola de 24cm a 26cm</option>
+          <option value="Cacerola">Sarten de 24cm a 26cm</option>
+          <option value="Cacerola">Bifera de 26cm a 29cm</option>
+          <option value="Cacerola">Paellera/Pizzera/Ovalada de 30cm a 33cm</option>
+          <option value="Cacerola">Cacerola Doble/Sarten Doble de 24cm a 30cm</option>
+          <option value="Cacerola">Cuadrada/Olla/Rectangular de 28cm a 30cm</option>
+          <option value="Cacerola">Jarro/Pava/Cafetera</option>
+          <option value="Cacerola">Tostador Simple/Doble</option>
+          <option value="Cacerola">Budinera u otros complementos</option>
+      </label>
+      </select>
+    </div>
+
+
+
+
+    <!-- Datalist & Option -->
+    <div class="form_input">
+      <label for="">¿Por dónde nos conociste?
+        <input list="Referente" name="Referente" required>
+        <datalist id="Referente">
+          <option value="Red Social">Instagram/Facebook</option>
+          <option value="Recomendacion familiar">Un Amigo/familiar</option>
+          <option value="Recomendacion Empresa">Una empresa/Negocio</option>
+      </label>
+      </select>
+    </div>
+
     <!-- Textarea -->
-        <div class="form_input">
-          <label>Mensaje
-          <textarea placeholder="Deja tu mensaje..." id="Mensaje"></textarea>
-        </label>
-        </div>
-    
-        <label for="adjunto">Subir Foto de tu pieza (Opcional):</label>
-        <input type="file" id="adjunto" name="adjunto"><br><br>
+    <div class="form_input">
+      <label>Mensaje
+        <textarea placeholder="Deja tu mensaje..." id="Mensaje" required></textarea>
+      </label>
+    </div>
 
-    
-        <div class="form_input">
-          <label>Acepto <a href="/template/terminos.html" target="_blank">Terminos y Condiciones</a>
-          <input type="checkbox" class="checkbox" id="terminos">
-        </label>
-        </div>
-    
-        <div><button type="submit" class="btn-black" id="b1">Enviar</button></div>
-      </form>
-<br>
-<br>
-
-    <footer class="footer">
+    <label for="adjunto">Subir Foto de tu pieza (Opcional):</label>
+    <input type="file" id="adjunto" name="adjunto"><br><br>
 
 
-    </footer>
+    <div class="form_input">
+      <label>Acepto <a href="/template/terminos.html" target="_blank">Terminos y Condiciones</a>
+        <input type="checkbox" class="checkbox" id="terminos">
+      </label>
+    </div>
 
-    <a href="https://wa.me/541130748502?text=Hola quiero informacion de su negocio" class="btn-wsp" target="_blank"> 
-        <img src="/images/whatsapp-fill.svg" alt="">
-    </a>
-    <script src="/js/header.js"></script>
-    <script src="/js/footer.js"></script>
-    <script src="/js/validacion.js"></script>
+    <div><button type="submit" class="btn-black" id="b1">Enviar</button></div>
+  </form>
+  <br>
+  <br>
+
+  <script>
+
+  </script>
+
+
+  <footer class="footer">
+
+
+  </footer>
+
+  <a href="https://wa.me/541130748502?text=Hola quiero informacion de su negocio" class="btn-wsp" target="_blank">
+    <img src="/images/whatsapp-fill.svg" alt="">
+  </a>
+  <script src="/js/header.js"></script>
+  <script src="/js/footer.js"></script>
+  <script src="/js/validacion-contacto.js"></script>
 
 </html>

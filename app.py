@@ -8,7 +8,6 @@ TAMBIÉN EJECUTARÁ ESTE CÓDIGO PARA QUE FUNCIONE LA API.
 #--------------------------------------------------------------------
 # Instalar con pip install Flask
 from flask import Flask, request, jsonify, render_template
-from flask import request
 
 # Instalar con pip install flask-cors
 from flask_cors import CORS
@@ -18,6 +17,8 @@ import mysql.connector
 
 # Si es necesario, pip install Werkzeug
 from werkzeug.utils import secure_filename
+from werkzeug.security import generate_password_hash, check_password_hash
+
 
 # No es necesario instalar, es parte del sistema standard de Python
 import os
@@ -25,102 +26,12 @@ import time
 import json
 #--------------------------------------------------------------------
 
-
-
 app = Flask(__name__)
 CORS(app)  # Esto habilitará CORS para todas las rutas
 
 #--------------------------------------------------------------------
-class Catalogo:
-    #----------------------------------------------------------------
-    # Constructor de la clase
-    def __init__(self, host, user, password, database):
-        # Primero, establecemos una conexión sin especificar la base de datos
-        self.conn = mysql.connector.connect(
-            host=host,
-            user=user,
-            password=password
-        )
-        self.cursor = self.conn.cursor()
-
-        # Intentamos seleccionar la base de datos
-        try:
-            self.cursor.execute(f"USE {database}")
-        except mysql.connector.Error as err:
-            # Si la base de datos no existe, la creamos
-            if err.errno == mysql.connector.errorcode.ER_BAD_DB_ERROR:
-                self.cursor.execute(f"CREATE DATABASE {database}")
-                self.conn.database = database
-            else:
-                raise err
-
-        # Una vez que la base de datos está establecida, creamos la tabla si no existe
-        self.cursor.execute('''CREATE TABLE IF NOT EXISTS productos (
-            codigo INT AUTO_INCREMENT PRIMARY KEY,
-            descripcion VARCHAR(255) NOT NULL,
-            cantidad INT NOT NULL,
-            precio DECIMAL(10, 2) NOT NULL,
-            imagen_url VARCHAR(255),
-            proveedor INT(4))''')
-        self.conn.commit()
-
-        # Cerrar el cursor inicial y abrir uno nuevo con el parámetro dictionary=True
-        self.cursor.close()
-        self.cursor = self.conn.cursor(dictionary=True)
-        
-    #----------------------------------------------------------------
-    def agregar_producto(self, descripcion, cantidad, precio, imagen, proveedor):
-               
-        sql = "INSERT INTO productos (descripcion, cantidad, precio, imagen_url, proveedor) VALUES (%s, %s, %s, %s, %s)"
-        valores = (descripcion, cantidad, precio, imagen, proveedor)
-
-        self.cursor.execute(sql, valores)        
-        self.conn.commit()
-        return self.cursor.lastrowid
-
-    #----------------------------------------------------------------
-    def consultar_producto(self, codigo):
-        # Consultamos un producto a partir de su código
-        self.cursor.execute(f"SELECT * FROM productos WHERE codigo = {codigo}")
-        return self.cursor.fetchone()
-
-    #----------------------------------------------------------------
-    def modificar_producto(self, codigo, nueva_descripcion, nueva_cantidad, nuevo_precio, nueva_imagen, nuevo_proveedor):
-        sql = "UPDATE productos SET descripcion = %s, cantidad = %s, precio = %s, imagen_url = %s, proveedor = %s WHERE codigo = %s"
-        valores = (nueva_descripcion, nueva_cantidad, nuevo_precio, nueva_imagen, nuevo_proveedor, codigo)
-        self.cursor.execute(sql, valores)
-        self.conn.commit()
-        return self.cursor.rowcount > 0
-
-    #----------------------------------------------------------------
-    def listar_productos(self):
-        self.cursor.execute("SELECT * FROM productos")
-        productos = self.cursor.fetchall()
-        return productos
-
-    #----------------------------------------------------------------
-    def eliminar_producto(self, codigo):
-        # Eliminamos un producto de la tabla a partir de su código
-        self.cursor.execute(f"DELETE FROM productos WHERE codigo = {codigo}")
-        self.conn.commit()
-        return self.cursor.rowcount > 0
-
-    #----------------------------------------------------------------
-    def mostrar_producto(self, codigo):
-        # Mostramos los datos de un producto a partir de su código
-        producto = self.consultar_producto(codigo)
-        if producto:
-            print("-" * 40)
-            print(f"Código.....: {producto['codigo']}")
-            print(f"Descripción: {producto['descripcion']}")
-            print(f"Cantidad...: {producto['cantidad']}")
-            print(f"Precio.....: {producto['precio']}")
-            print(f"Imagen.....: {producto['imagen_url']}")
-            print(f"Proveedor..: {producto['proveedor']}")
-            print("-" * 40)
-        else:
-            print("Producto no encontrado.")
-
+from .catalogo import Catalogo # importamos la clase catalogo
+from .login_register import Usuarios 
 
 #--------------------------------------------------------------------
 # Cuerpo del programa
@@ -142,17 +53,19 @@ except json.JSONDecodeError as e:
 
 HOST_URL = config["HOST_URL"]
 HOST_USER = config["HOST_USER"]
-HOST_PASSWORD = config["HOST_PASSWORD"]
-HOST_DATABASE = config["HOST_DATABASE"]
 
 # Crear una instancia de la clase Catalogo
-catalogo = Catalogo(host=HOST_URL, user=HOST_USER, password=HOST_PASSWORD, database=HOST_DATABASE)
+catalogo = Catalogo(host=HOST_URL, user=HOST_USER, 
+                    password=config["HOST_PASSWORD"], 
+                    database=config["HOST_DATABASE"])
+usuarios = Usuarios(host=HOST_URL, user=HOST_USER, 
+                    password=config["HOST_PASSWORD"], 
+                    database=config["HOST_DATABASE"])
 
-#catalogo = Catalogo(host='USUARIO.mysql.pythonanywhere-services.com', user='USUARIO', password='CLAVE', database='USUARIO$miapp')
 
 
 # Carpeta para guardar las imagenes.
-RUTA_DESTINO = ROOT+'/static/imagenes/'
+RUTA_DESTINO_IMAGENES = ROOT+'/static/imagenes/'
 
 
 #--------------------------------------------------------------------
@@ -203,7 +116,7 @@ def agregar_producto():
 
     nuevo_codigo = catalogo.agregar_producto(descripcion, cantidad, precio, nombre_imagen, proveedor)
     if nuevo_codigo:    
-        imagen.save(os.path.join(RUTA_DESTINO, nombre_imagen))
+        imagen.save(os.path.join(RUTA_DESTINO_IMAGENES, nombre_imagen))
 
         #Si el producto se agrega con éxito, se devuelve una respuesta JSON con un mensaje de éxito y un código de estado HTTP 201 (Creado).
         return jsonify({"mensaje": "Producto agregado correctamente.", "codigo": nuevo_codigo, "imagen": nombre_imagen}), 201
@@ -235,14 +148,14 @@ def modificar_producto(codigo):
         nombre_imagen = f"{nombre_base}_{int(time.time())}{extension}" #Genera un nuevo nombre para la imagen usando un timestamp, para evitar sobreescrituras y conflictos de nombres.
 
         # Guardar la imagen en el servidor
-        imagen.save(os.path.join(RUTA_DESTINO, nombre_imagen))
+        imagen.save(os.path.join(RUTA_DESTINO_IMAGENES, nombre_imagen))
         
         # Busco el producto guardado
         producto = catalogo.consultar_producto(codigo)
         if producto: # Si existe el producto...
             imagen_vieja = producto["imagen_url"]
             # Armo la ruta a la imagen
-            ruta_imagen = os.path.join(RUTA_DESTINO, imagen_vieja)
+            ruta_imagen = os.path.join(RUTA_DESTINO_IMAGENES, imagen_vieja)
 
             # Y si existe la borro.
             if os.path.exists(ruta_imagen):
@@ -278,7 +191,7 @@ def eliminar_producto(codigo):
     if producto: # Si el producto existe, verifica si hay una imagen asociada en el servidor.
         imagen_vieja = producto["imagen_url"]
         # Armo la ruta a la imagen
-        ruta_imagen = os.path.join(RUTA_DESTINO, imagen_vieja)
+        ruta_imagen = os.path.join(RUTA_DESTINO_IMAGENES, imagen_vieja)
 
         # Y si existe, la elimina del sistema de archivos.
         if os.path.exists(ruta_imagen):
@@ -294,6 +207,35 @@ def eliminar_producto(codigo):
     else:
         #Si el producto no se encuentra (por ejemplo, si no existe un producto con el codigo proporcionado), se devuelve un mensaje de error con un código de estado HTTP 404 (No Encontrado). 
         return jsonify({"mensaje": "Producto no encontrado"}), 404
+
+
+#--------------------------------------------------------------------
+# Loggear usuario
+#--------------------------------------------------------------------
+@app.route("/login", methods=["POST"])
+def loggear_usuario():
+    username = request.form.get('username')
+    password = request.form.get('password')
+    if username and password:
+        user = usuarios.consultar_usuario(username)
+        if user and check_password_hash(user["password_hash"], password):
+            return jsonify({'mensaje': 'El loggeo fue exitoso'}), 200
+    return jsonify({'mensaje': 'Nombre de usuario o contraseña inválidos'}), 401
+        
+
+#--------------------------------------------------------------------
+# Registrar nuevo usuario
+#--------------------------------------------------------------------
+@app.route("/register", methods=["POST"])
+def registrar_usuario():
+    username = request.form.get('username')
+    email = request.form.get('email')
+    password = request.form.get('password')
+    if username and password:
+        password_hash = generate_password_hash(password)
+        usuarios.registrar_usuario(username, email, password_hash)
+        return jsonify({'mensaje': 'Usuario creado exitosamente'}), 201
+    return jsonify({'mensaje': 'Nombre de usuario o contraseña faltantes'}), 400
 
 #--------------------------------------------------------------------
 if __name__ == "__main__":

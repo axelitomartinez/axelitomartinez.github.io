@@ -1,5 +1,4 @@
-let formulario = document.getElementsByName('formulario')[0];
-let boton = document.getElementById('b1');
+let formulario = document.getElementByName('formulario');
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -58,30 +57,13 @@ let validarCheckbox = function (e) {
 
 //validar edad ------
 let validarEdad = function(e) {
-    let edad = formulario.edad.value;
-    edad = validarEntero(edad);
-    formulario.edad.value = edad;
-    if (edad == "") {
-        alert("Tiene que introducir un número entero en su edad.");
+    if (formulario.edad.value < 18) {
+        alert("Debe ser mayor de 18 años.");
         formulario.edad.focus();
         e.preventDefault();
-    } else {
-        if (edad < 18) {
-            alert("Debe ser mayor de 18 años.");
-            formulario.edad.focus();
-            e.preventDefault();
-        }
     }
 }
 
-function validarEntero(valor) {
-    valor = parseInt(valor);
-    if (isNaN(valor)) {
-        return "";
-    } else {
-        return valor;
-    }
-}
 // -------- -------
 
 //validar select
@@ -90,7 +72,7 @@ let validarPieza = function(e) {
       alert("Debe seleccionar que pieza desea restaurar.");
       formulario.pieza.focus();
       e.preventDefault();
-}
+    }
 }
 
 //validaciones
