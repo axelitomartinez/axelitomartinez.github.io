@@ -54,17 +54,16 @@ except json.JSONDecodeError as e:
 HOST_URL = config["HOST_URL"]
 HOST_USER = config["HOST_USER"]
 HOST_PASSWORD = config["HOST_PASSWORD"]
-HOST_DATABASE = config["HOST_DATABASE"]
+CATALAGO_DB = config["CATALOGO_DATABASE_NAME"]
+USUARIOS_DB = config["USUARIOS_DATABASE_NAME"]
 
 # Crear una instancia de la clase Catalogo
-catalogo = Catalogo(host=HOST_URL, user=HOST_USER, password=HOST_PASSWORD, database=HOST_DATABASE)
-usuarios = Usuarios(host=HOST_URL, user=HOST_USER, password=HOST_PASSWORD, database=HOST_DATABASE)
-
+catalogo = Catalogo(host=HOST_URL, user=HOST_USER, password=HOST_PASSWORD, database=CATALAGO_DB)
+usuarios = Usuarios(host=HOST_URL, user=HOST_USER, password=HOST_PASSWORD, database=USUARIOS_DB)
 
 
 # Carpeta para guardar las imagenes.
 RUTA_DESTINO_IMAGENES = ROOT+'/static/imagenes/'
-
 
 #--------------------------------------------------------------------
 # Listar todos los productos
