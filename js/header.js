@@ -20,6 +20,8 @@ let miHeader = `
                         <li><a href="/template/Contacto.html">Contacto</a></li>
                         <li><a href="/template/Quienes-somos.html">Quienes Somos</a></li>
                         <li><a href="/C.R.U.D/index.html">C.R.U.D</a></li>
+                        <li><a href="/Login-register/register.html">Registrarse</a>
+                        <li><a href="/Login-register/login.html">Login</a>
                     </ul>
                 </nav>
                 <div>
