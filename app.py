@@ -30,8 +30,8 @@ app = Flask(__name__)
 CORS(app)  # Esto habilitará CORS para todas las rutas
 
 #--------------------------------------------------------------------
-from .catalogo import Catalogo # importamos la clase catalogo
-from .login_register import Usuarios 
+from catalogo import Catalogo # importamos la clase catalogo
+from login_register import Usuarios 
 
 #--------------------------------------------------------------------
 # Cuerpo del programa
@@ -213,10 +213,12 @@ def eliminar_producto(codigo):
 def loggear_usuario():
     username = request.form.get('username')
     password = request.form.get('password')
-    if username and password:
-        user = usuarios.consultar_usuario(username)
-        if user and check_password_hash(user["password_hash"], password):
-            return jsonify({'mensaje': 'El loggeo fue exitoso'}), 200
+
+    user = usuarios.consultar_usuario(username)
+    
+    if user and check_password_hash(user["password_hash"], password):
+        return jsonify({'mensaje': 'El loggeo fue exitoso'}), 200
+
     return jsonify({'mensaje': 'Nombre de usuario o contraseña inválidos'}), 401
         
 
@@ -228,11 +230,23 @@ def registrar_usuario():
     username = request.form.get('username')
     email = request.form.get('email')
     password = request.form.get('password')
-    if username and password:
-        password_hash = generate_password_hash(password)
+
+    if not username or not password or not email:
+        return jsonify({'mensaje': 'Nombre de usuario, correo electrónico y contraseña son requeridos'}), 400
+    
+    if usuarios.consultar_existencia_nombre(username):
+        return jsonify({'mensaje': 'El nombre de usuario ya está en uso'}), 400
+    if usuarios.consultar_existencia_email(email):
+        return jsonify({'mensaje': 'El nombre de usuario ya está en uso'}), 400
+    
+    password_hash = generate_password_hash(password)
+
+    try:
         usuarios.registrar_usuario(username, email, password_hash)
         return jsonify({'mensaje': 'Usuario creado exitosamente'}), 201
-    return jsonify({'mensaje': 'Nombre de usuario o contraseña faltantes'}), 400
+    except Exception as e:
+        return jsonify({'mensaje': 'Error al registrar el usuario', 'error': str(e)}), 500
+
 
 #--------------------------------------------------------------------
 if __name__ == "__main__":

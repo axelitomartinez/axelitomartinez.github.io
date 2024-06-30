@@ -41,7 +41,7 @@ class Usuarios:
         
     #----------------------------------------------------------------
     def registrar_usuario(self, username, email, password_hash):
-        sql = "INSERT INTO usuarios (username, email, password_hash) VALUES (%s, %s, %s)"
+        sql = "INSERT INTO users (username, email, password_hash) VALUES (%s, %s, %s)"
         valores = (username, email, password_hash)
 
         self.cursor.execute(sql, valores)        
@@ -49,29 +49,31 @@ class Usuarios:
         return self.cursor.lastrowid
 
     #----------------------------------------------------------------
-    def consultar_existencia(self, email):  # retorna veces que encontró ese email
-        self.cursor.execute(f"SELECT SELECT(*) FROM users WHERE email={email}")
-        return bool(self.cursor.fetchone())
+    def consultar_existencia_email(self, email):  # retorna veces que encontró ese email
+        self.cursor.execute(f"SELECT EXISTS(SELECT 1 FROM users WHERE email='{email}') AS 'exists'")
+        return self.cursor.fetchone()["exists"]
     
-    def consultar_existencia(self, username): # retorna veces que encontró ese username
-        self.cursor.execute(f"SELECT COUNT(*) FROM users WHERE username={username}")
-        return bool(self.cursor.fetchone())
+    def consultar_existencia_nombre(self, username): # retorna veces que encontró ese username
+        self.cursor.execute(f"SELECT EXISTS(SELECT 1 FROM users WHERE username='{username}') AS 'exists'")
+        return self.cursor.fetchone()["exists"]
     
     def consultar_usuario(self, username):
-        self.cursor.execute(f"SELECT * FROM users WHERE username={username}")
+        self.cursor.execute(f"SELECT * FROM users WHERE username='{username}'")
         return self.cursor.fetchone()
     
     #----------------------------------------------------------------
     def modificar_contrasenia(self, username, email, old_password_hash, new_password_hash):
-        sql = "UPDATE users SET password_hash = %s WHERE username=%s, email=%s, password_hash=%s "
+        sql = "UPDATE users SET password_hash = %s WHERE username=%s AND email=%s AND password_hash=%s "
         valores = (new_password_hash, username, email, old_password_hash)
         self.cursor.execute(sql, valores)
         self.conn.commit()
         return self.cursor.rowcount > 0
     
     #----------------------------------------------------------------
-    def eliminar_usuario(self, codigo):
+    def eliminar_usuario(self, username, email, password_hash):
         # Eliminamos un producto de la tabla a partir de su código
-        self.cursor.execute(f"DELETE FROM usuarios WHERE username=%s, email=%s, password_hash=%s")
+        sql = "DELETE FROM users WHERE username=%s, email=%s, password_hash=%s"  # pasamos todos los valores para estar bien seguros de qué estamos eliminando
+        valores = (username, email, password_hash)
+        self.cursor.execute(sql, valores)
         self.conn.commit()
         return self.cursor.rowcount > 0
