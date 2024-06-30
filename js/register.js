@@ -7,10 +7,10 @@ document.querySelector('form').addEventListener('submit', function (event) {
     var submitButton = this.querySelector('button[type="submit"]');
     submitButton.disabled = true; // deshabilitar boton para evitar multiples envios
 
-    password = this.querySelector("#password")
-    confirm_password = this.querySelector("#confirm_password")
+    password = document.getElementById('password').value;
+    confirm_password = document.getElementById('confirm-password').value;
     if(password != confirm_password) {
-        alert("Ambas contraseñas no coinciden.")   
+        alert("Ambas contraseñas no coinciden.");
         submitButton.disabled = false; 
         return;
     }
