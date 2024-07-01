@@ -650,9 +650,10 @@ button {
   font-weight: 800;
 } 
 
-/* a:hover, button:hover {
-  background-color: #5390d2;
-} */
+a:hover, button:hover {
+  background: #2d03d5;
+}
+
 
 .borrar {
   background-color: #111111;
