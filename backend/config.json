@@ -1,0 +1,7 @@
+{
+  "HOST_URL": "zhl27.mysql.pythonanywhere-services.com",
+  "HOST_USER": "zhl27",
+  "HOST_PASSWORD": "",
+  "CATALOGO_DATABASE_NAME": "zhl27$miapp",
+  "USUARIOS_DATABASE_NAME": "zhl27$usuarios"
+}
